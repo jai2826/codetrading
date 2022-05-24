@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_points_specialities",
+  "info": {
+    "displayName": "speciality",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    },
+    "included": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
