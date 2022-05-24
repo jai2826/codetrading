@@ -19,10 +19,10 @@ const Navbar = () => {
           <Link  href={'/Aboutus'}><a className='py-1 px-2 rounded-lg  text-md md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>About Us</li></a></Link>
           <Link  href={'/Services'}><a className='py-1 px-2 rounded-lg  text-md md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Services</li></a></Link>
         </ul>
-        <Link href={'/Register'}><div className=" bg-purple-500 absolute right-4 m-2 h-8 w-20 bg rounded-md text-center py-1 font-semibold cursor-pointer">
+        {/* <Link href={'/Register'}><div className=" bg-purple-500 absolute right-4 m-2 h-8 w-20 bg rounded-md text-center py-1 font-semibold cursor-pointer">
          Login
         </div>
-        </Link>
+        </Link> */}
 
     </div>
   )

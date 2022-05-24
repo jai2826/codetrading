@@ -15,6 +15,16 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/Guides": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Guides.js"
+    ],
+    "/Services": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Services.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
