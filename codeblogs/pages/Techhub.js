@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Techhub = ({ blogs }) => {
+  
   let newblogs = [];
   {
     blogs.data.map(item => {
@@ -34,16 +35,22 @@ const Techhub = ({ blogs }) => {
         progress: undefined,
       });
   }
-  return (
-    <section>
+  return (<section>
       <div className="container mx-auto sm:px-6 lg:py-16 lg:px-8">
-        <div className=" mx-auto max-w-7xl">
-          <div className="flex flex-wrap m-4">
+        <div className=" flex flex-wrap w-full mb-20 md:flex-col">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Everything to know about tech is here!!!</h1>
+            <div className="h-1 w-20 bg-purple-500 rounded"></div>
+          </div>
+          <p className=" w-full leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit maiores ab iste, esse, perspiciatis dicta, libero unde ad fugit labore sequi nesciunt deserunt. Dolor, consectetur libero. Odio quo dolorum laboriosam quos ullam nesciunt, possimus corporis molestias eos, deleniti itaque dignissimos sint odit soluta omnis velit incidunt unde voluptatibus! Aspernatur?</p>
+        </div>
+        <div className=" mx-auto  ">
+        <div className="flex flex-wrap m-4 justify-center">
             {/* Inner container */}
             {newblogs && newblogs.slice(0, visible).map(item => { 
-              return (<div key={item.__id} className="flex flex-col overflow-hidden rounded-lg shadow-lg xl:w-1/4 md:w-1/2 p-4 ">
-              <div className="flex-shrink-0">
-                <img className="object-cover item object-center w-full " src={ item.attributes.image.data && item.attributes.image.data.attributes.name } alt=""/>
+              return (<div key={item.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg  lg:w-1/4 md:w-1/2  p-4 ">
+              <div >
+                <img className="object-cover item object-center w-80 self-center " src={ item.attributes.image.data && item.attributes.image.data.attributes.name } alt=""/>
               </div>
               <Link href={`/Blog/${item.attributes.slug}`} className="flex flex-col justify-between p-10  bg-white">
                 <div className="flex-1">
@@ -59,13 +66,14 @@ const Techhub = ({ blogs }) => {
                       <span className="sr-only">{item.attributes.author.data.attributes.name}</span>
                       <img className="w-10 h-10 rounded-full" src="https://d33wubrfki0l68.cloudfront.net/2f76102fd18a4e095eaed7a836a3f2183a982a4d/91dd4/images/avatar.jpg" alt=""/>
                     </a>
+
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-neutral-600">
                       <a href="https://twitter.com/Mike_Andreuzza" className="hover:underline"> </a>
                     </p>
                     <div className="flex space-x-1 text-sm text-gray-500">
-                      <time datetime="2020-03-16"> Mar 16, 2020 </time>
+                      <time > Mar 16, 2020 </time>
                       <span aria-hidden="true"> · </span>
                       <span> 6 min read </span>
                     </div>
@@ -95,14 +103,6 @@ const Techhub = ({ blogs }) => {
 
 
     {/* // <section >
-    //   <div className="container px-5 py-24 mx-auto">
-    //     <div className="flex flex-wrap w-full mb-20 md:flex-col">
-    //       <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-    //         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Everything to know about tech is here!!!</h1>
-    //         <div className="h-1 w-20 bg-purple-500 rounded"></div>
-    //       </div>
-    //       <p className=" w-full leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit maiores ab iste, esse, perspiciatis dicta, libero unde ad fugit labore sequi nesciunt deserunt. Dolor, consectetur libero. Odio quo dolorum laboriosam quos ullam nesciunt, possimus corporis molestias eos, deleniti itaque dignissimos sint odit soluta omnis velit incidunt unde voluptatibus! Aspernatur?</p>
-    //     </div>
     //     <div className="flex flex-wrap m-4">
     //       {newblogs && newblogs.slice(0, visible).map((item) => {
             return (<Link key={item.__id} href={`/Blog/${item.attributes.slug}`}>

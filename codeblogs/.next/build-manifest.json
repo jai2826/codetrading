@@ -15,15 +15,15 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/Guides": [
+    "/Blog/[slug]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Guides.js"
+      "static/chunks/pages/Blog/[slug].js"
     ],
-    "/Services": [
+    "/Techhub": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Services.js"
+      "static/chunks/pages/Techhub.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
