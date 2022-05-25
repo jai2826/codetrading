@@ -15,15 +15,20 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/Blog/[slug]": [
+    "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Blog/[slug].js"
+      "static/chunks/pages/index.js"
     ],
-    "/Techhub": [
+    "/Services/Advertisements": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Techhub.js"
+      "static/chunks/pages/Services/Advertisements.js"
+    ],
+    "/Services/Websitebuild": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Services/Websitebuild.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
