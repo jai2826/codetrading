@@ -20,15 +20,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/Services/Advertisements": [
+    "/Blog/[slug]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Services/Advertisements.js"
+      "static/chunks/pages/Blog/[slug].js"
     ],
-    "/Services/Websitebuild": [
+    "/Techhub": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Services/Websitebuild.js"
+      "static/chunks/pages/Techhub.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
