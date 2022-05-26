@@ -7,7 +7,9 @@ module.exports = ({ env }) => ({
       database: env('database', 'codeblogs'),
       user: env('username', 'postgres'),
       password: env('password', 'Jaip2826@'),
-      ssl: env.bool('sslmode', false),
+      ssl: {
+        rejctUnauthorized:false,
+      }
     },
   },
 });
