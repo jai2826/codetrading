@@ -8,7 +8,7 @@ const Aboutus = () => {
           <div className="w-full mx-auto">
             <h1>A small headline to switch your visitors into users.</h1>
             <h2>A small headline to switch your visitors into users.</h2>
-            <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling.</p>
+            <p>Right. Say that again. No, no, George, look, it&apos;s just an act, right? Okay, so 9:00 you&apos;re strolling through the parking lot, you see us struggling.</p>
           </div>
         </div>
         <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
@@ -25,7 +25,7 @@ const Aboutus = () => {
           </div>
           <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
             <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
           </div>
         </div>
         <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
@@ -42,7 +42,7 @@ const Aboutus = () => {
           </div>
           <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
             <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
           </div>
         </div>
         <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
@@ -59,7 +59,7 @@ const Aboutus = () => {
           </div>
           <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
             <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
           </div>
         </div>
       </div>
