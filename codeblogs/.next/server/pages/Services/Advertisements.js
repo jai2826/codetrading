@@ -1,45 +1,200 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/Services/Advertisements";
-exports.ids = ["pages/Services/Advertisements"];
+exports.id = 377;
+exports.ids = [377];
 exports.modules = {
 
-/***/ "./pages/Services/Advertisements.js":
-/*!******************************************!*\
-  !*** ./pages/Services/Advertisements.js ***!
-  \******************************************/
+/***/ 8707:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconst Advertisements = ({ plans , validity , checkcategory  })=>{\n    let newplans = [];\n    console.log(newplans.length);\n    plans.data.map((item)=>{\n        if (item.attributes.category === checkcategory) newplans.push(item);\n    });\n    newplans.sort((a, b)=>{\n        return a.id - b.id; //To sort in ascending order\n    });\n    if (newplans.length === 0) {\n        validity(1);\n    }\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n        className: \"text-gray-600 body-font overflow-hidden\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"container px-5 py-24 mx-auto\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"flex flex-col text-center w-full mb-20\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                            className: \"sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900\",\n                            children: \"Pricing\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                            lineNumber: 27,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            className: \"lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500\",\n                            children: \"Get Amazing discounts on yearly plans\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                            lineNumber: 28,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"flex mx-auto border-2 border-black rounded overflow-hidden mt-6\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    onClick: ()=>{\n                                        validity(1);\n                                    },\n                                    className: \"validity py-1 px-4 focus:outline-none active:bg-purple-500\",\n                                    children: \"Monthly\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                    lineNumber: 30,\n                                    columnNumber: 13\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"border border-black\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                    lineNumber: 31,\n                                    columnNumber: 13\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    onClick: ()=>{\n                                        validity(6);\n                                    },\n                                    className: \"validity py-1 px-4 focus:outline-none active:bg-purple-500\",\n                                    children: \"Semi-annually\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                    lineNumber: 32,\n                                    columnNumber: 13\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"border border-black\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                    lineNumber: 33,\n                                    columnNumber: 13\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    onClick: ()=>{\n                                        validity(12);\n                                    },\n                                    className: \"validity py-1 px-4 focus:outline-none active:bg-purple-500\",\n                                    children: \"Annually\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                    lineNumber: 34,\n                                    columnNumber: 13\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                            lineNumber: 29,\n                            columnNumber: 11\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                    lineNumber: 26,\n                    columnNumber: 9\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"flex flex-wrap place-content-center\",\n                    children: newplans.map((item)=>{\n                        return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col overflow-hidden\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                                        className: \"text-sm tracking-widest title-font mb-1 font-medium\",\n                                        children: item.attributes.name\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                        lineNumber: 44,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                                        className: \"text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                children: [\n                                                    \"\\u20B9\",\n                                                    item.attributes.price\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                lineNumber: 46,\n                                                columnNumber: 19\n                                            }, undefined),\n                                            item.attributes.category != \"Null\" && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                className: \"text-lg ml-1 font-normal text-gray-500\",\n                                                children: [\n                                                    \"/\",\n                                                    item.attributes.category\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                lineNumber: 47,\n                                                columnNumber: 60\n                                            }, undefined)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                        lineNumber: 45,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    item.attributes.speciality.map((item2)=>{\n                                        return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                            className: \"flex items-center text-gray-600 mb-2\",\n                                            children: [\n                                                item2.included && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    className: \"h-4 w-4 mr-2\",\n                                                    src: \"/icons/checked.png\",\n                                                    alt: \"\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                    lineNumber: 52,\n                                                    columnNumber: 40\n                                                }, undefined),\n                                                !item2.included && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    className: \"h-4 w-4 mr-2\",\n                                                    src: \"/icons/cancel.png\",\n                                                    alt: \"\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                    lineNumber: 53,\n                                                    columnNumber: 41\n                                                }, undefined),\n                                                item2.point\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                            lineNumber: 51,\n                                            columnNumber: 27\n                                        }, undefined);\n                                    }),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                        className: \"flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded \",\n                                        children: [\n                                            \"Button\",\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                                                fill: \"none\",\n                                                stroke: \"currentColor\",\n                                                strokeLinecap: \"round\",\n                                                strokeLinejoin: \"round\",\n                                                strokeWidth: \"2\",\n                                                className: \"w-4 h-4 ml-auto\",\n                                                viewBox: \"0 0 24 24\",\n                                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                                                    d: \"M5 12h14M12 5l7 7-7 7\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                    lineNumber: 59,\n                                                    columnNumber: 21\n                                                }, undefined)\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                                lineNumber: 58,\n                                                columnNumber: 19\n                                            }, undefined)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                        lineNumber: 57,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    item.attributes.footer != null && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        class: \"text-xs text-gray-500 mt-3\",\n                                        children: [\n                                            \"Monthly Charges: \\u20B9\",\n                                            item.attributes.footer\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                        lineNumber: 62,\n                                        columnNumber: 54\n                                    }, undefined)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                                lineNumber: 43,\n                                columnNumber: 15\n                            }, undefined)\n                        }, item.__id, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                            lineNumber: 42,\n                            columnNumber: 21\n                        }, undefined);\n                    })\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n                    lineNumber: 39,\n                    columnNumber: 9\n                }, undefined)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n            lineNumber: 25,\n            columnNumber: 7\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Advertisements.js\",\n        lineNumber: 24,\n        columnNumber: 5\n    }, undefined);\n};\nasync function getServerSideProps(context) {\n    let headers = {\n        Authorization: \"Bearer 2d07dcb064b11688035e4439eb838361893b9d32cd98b3b67bf56a3b8e64ecd79f9985c3c5025e2c669350c67fec864f30b3497a4a5811b97c79ee6734b0bd4df5285915a9292d9813e5c11ccb301091aa19b080e559e686375e58ab1545f90b40f6a645980c7a097f63b528d6e0083f9db8f56600fa6c43f731b30161f6d666\"\n    };\n    let a = await fetch(`${\"http://localhost:1337\"}/api/advertisements?populate=*`, {\n        headers: headers\n    });\n    let plans = await a.json();\n    // res.status(200).json({ blog })\n    return {\n        props: {\n            plans: plans\n        }\n    };\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Advertisements);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFDQyxVQUFVLENBQUNrQyxNQUFNLElBQUksSUFBSSxrQkFBSyw4REFBQ3ZCLEdBQUM7d0NBQUN3QixLQUFLLEVBQUMsNEJBQTRCOzs0Q0FBQyx5QkFBa0I7NENBQUNwQyxJQUFJLENBQUNDLFVBQVUsQ0FBQ2tDLE1BQU07Ozs7OztpREFBSzs7Ozs7O3lDQUVySDsyQkF0QlVuQyxJQUFJLENBQUNxQyxJQUFJOzs7O3FDQXVCckIsQ0FBQztxQkFDUixDQUFDOzs7Ozs2QkFFRTs7Ozs7O3FCQUNGOzs7OztpQkFDRSxDQUNYO0NBQ0Y7QUFFTSxlQUFlQyxrQkFBa0IsQ0FBQ0MsT0FBTyxFQUFFO0lBQ2hELElBQUlDLE9BQU8sR0FBRztRQUFFQyxhQUFhLEVBQUUseVFBQXlRO0tBQUU7SUFFMVMsSUFBSXBDLENBQUMsR0FBRyxNQUFNcUMsS0FBSyxDQUFDLENBQUMsRUFBRUMsdUJBQWtDLENBQUMsOEJBQThCLENBQUMsRUFBRTtRQUFFSCxPQUFPLEVBQUVBLE9BQU87S0FBRSxDQUFDO0lBRWhILElBQUlqRCxLQUFLLEdBQUcsTUFBTWMsQ0FBQyxDQUFDeUMsSUFBSSxFQUFFO0lBRzFCLGlDQUFpQztJQUNqQyxPQUFPO1FBQ0xDLEtBQUssRUFBRTtZQUFFeEQsS0FBSyxFQUFFQSxLQUFLO1NBQUU7S0FDeEI7Q0FDRjtBQUNELGlFQUFlRCxjQUFjIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY29kZWJsb2dzLy4vcGFnZXMvU2VydmljZXMvQWR2ZXJ0aXNlbWVudHMuanM/NmQyZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXHJcbmltcG9ydCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCdcclxuXHJcblxyXG5cclxuXHJcblxyXG5jb25zdCBBZHZlcnRpc2VtZW50cyA9ICh7IHBsYW5zLCB2YWxpZGl0eSwgY2hlY2tjYXRlZ29yeSB9KSA9PiB7XHJcbiAgbGV0IG5ld3BsYW5zID0gW11cclxuICBjb25zb2xlLmxvZyhuZXdwbGFucy5sZW5ndGgpXHJcbiAgcGxhbnMuZGF0YS5tYXAoaXRlbSA9PiB7XHJcbiAgICBpZiAoaXRlbS5hdHRyaWJ1dGVzLmNhdGVnb3J5ID09PSBjaGVja2NhdGVnb3J5KVxyXG4gICAgICBuZXdwbGFucy5wdXNoKGl0ZW0pXHJcbiAgfSlcclxuICBuZXdwbGFucy5zb3J0KChhLCBiKSA9PiB7XHJcbiAgICByZXR1cm4gYS5pZCAtIGIuaWQ7ICAgLy9UbyBzb3J0IGluIGFzY2VuZGluZyBvcmRlclxyXG4gIH0pO1xyXG4gIGlmIChuZXdwbGFucy5sZW5ndGggPT09IDApIHtcclxuICAgIHZhbGlkaXR5KDEpO1xyXG5cclxuICB9XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIGJvZHktZm9udCBvdmVyZmxvdy1oaWRkZW5cIj5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXIgcHgtNSBweS0yNCBteC1hdXRvXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIHRleHQtY2VudGVyIHctZnVsbCBtYi0yMFwiPlxyXG4gICAgICAgICAgPGgxIGNsYXNzTmFtZT1cInNtOnRleHQtNHhsIHRleHQtM3hsIGZvbnQtbWVkaXVtIHRpdGxlLWZvbnQgbWItMiB0ZXh0LWdyYXktOTAwXCI+UHJpY2luZzwvaDE+XHJcbiAgICAgICAgICA8cCBjbGFzc05hbWU9XCJsZzp3LTIvMyBteC1hdXRvIGxlYWRpbmctcmVsYXhlZCB0ZXh0LWJhc2UgdGV4dC1ncmF5LTUwMFwiPkdldCBBbWF6aW5nIGRpc2NvdW50cyBvbiB5ZWFybHkgcGxhbnM8L3A+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggbXgtYXV0byBib3JkZXItMiBib3JkZXItYmxhY2sgcm91bmRlZCBvdmVyZmxvdy1oaWRkZW4gbXQtNlwiPlxyXG4gICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9eygpID0+IHsgdmFsaWRpdHkoMSkgfX0gY2xhc3NOYW1lPVwidmFsaWRpdHkgcHktMSBweC00IGZvY3VzOm91dGxpbmUtbm9uZSBhY3RpdmU6YmctcHVycGxlLTUwMFwiPk1vbnRobHk8L2J1dHRvbj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJib3JkZXIgYm9yZGVyLWJsYWNrXCI+PC9kaXY+XHJcbiAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4geyB2YWxpZGl0eSg2KSB9fSBjbGFzc05hbWU9XCJ2YWxpZGl0eSBweS0xIHB4LTQgZm9jdXM6b3V0bGluZS1ub25lIGFjdGl2ZTpiZy1wdXJwbGUtNTAwXCI+U2VtaS1hbm51YWxseTwvYnV0dG9uPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJvcmRlciBib3JkZXItYmxhY2tcIj48L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiB7IHZhbGlkaXR5KDEyKSB9fSBjbGFzc05hbWU9XCJ2YWxpZGl0eSBweS0xIHB4LTQgZm9jdXM6b3V0bGluZS1ub25lIGFjdGl2ZTpiZy1wdXJwbGUtNTAwXCI+QW5udWFsbHk8L2J1dHRvbj5cclxuXHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtd3JhcCBwbGFjZS1jb250ZW50LWNlbnRlclwiPlxyXG5cclxuICAgICAgICAgIHtuZXdwbGFucy5tYXAoKGl0ZW0pID0+IHtcclxuICAgICAgICAgICAgcmV0dXJuICg8ZGl2IGtleT17aXRlbS5fX2lkfSBjbGFzc05hbWU9XCJwLTQgeGw6dy0xLzQgbWF4LWgtMTI4IG1kOnctMS8yIHctZnVsbFwiPlxyXG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaC1mdWxsIHAtNiByb3VuZGVkLWxnIGJvcmRlci0yIGJvcmRlci1ncmF5LTMwMCBmbGV4IGZsZXgtY29sICBvdmVyZmxvdy1oaWRkZW5cIj5cclxuICAgICAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRyYWNraW5nLXdpZGVzdCB0aXRsZS1mb250IG1iLTEgZm9udC1tZWRpdW1cIj57aXRlbS5hdHRyaWJ1dGVzLm5hbWV9PC9oMj5cclxuICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LTV4bCB0ZXh0LWdyYXktOTAwIGxlYWRpbmctbm9uZSBmbGV4IGl0ZW1zLWNlbnRlciBwYi00IG1iLTQgYm9yZGVyLWIgYm9yZGVyLWdyYXktMjAwXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxzcGFuPuKCuXtpdGVtLmF0dHJpYnV0ZXMucHJpY2V9PC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICB7KGl0ZW0uYXR0cmlidXRlcy5jYXRlZ29yeSAhPSBcIk51bGxcIikgJiYgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1sZyBtbC0xIGZvbnQtbm9ybWFsIHRleHQtZ3JheS01MDBcIj4ve2l0ZW0uYXR0cmlidXRlcy5jYXRlZ29yeX08L3NwYW4+fVxyXG4gICAgICAgICAgICAgICAgPC9oMT5cclxuXHJcbiAgICAgICAgICAgICAgICB7aXRlbS5hdHRyaWJ1dGVzLnNwZWNpYWxpdHkubWFwKChpdGVtMikgPT4ge1xyXG4gICAgICAgICAgICAgICAgICByZXR1cm4gKDxwIGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIHRleHQtZ3JheS02MDAgbWItMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtpdGVtMi5pbmNsdWRlZCAmJiA8aW1nIGNsYXNzTmFtZT0naC00IHctNCBtci0yJyBzcmM9XCIvaWNvbnMvY2hlY2tlZC5wbmdcIiBhbHQ9XCJcIiAvPn1cclxuICAgICAgICAgICAgICAgICAgICB7IWl0ZW0yLmluY2x1ZGVkICYmIDxpbWcgY2xhc3NOYW1lPSdoLTQgdy00IG1yLTInIHNyYz1cIi9pY29ucy9jYW5jZWwucG5nXCIgYWx0PVwiXCIgLz59XHJcbiAgICAgICAgICAgICAgICAgICAge2l0ZW0yLnBvaW50fVxyXG4gICAgICAgICAgICAgICAgICA8L3A+KVxyXG4gICAgICAgICAgICAgICAgfSl9XHJcbiAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIG10LWF1dG8gdGV4dC13aGl0ZSBiZy1ncmF5LTQwMCBib3JkZXItMCBweS0yIHB4LTQgdy1mdWxsIGZvY3VzOm91dGxpbmUtbm9uZSBob3ZlcjpiZy1ncmF5LTUwMCByb3VuZGVkIFwiPkJ1dHRvblxyXG4gICAgICAgICAgICAgICAgICA8c3ZnIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiIHN0cm9rZVdpZHRoPVwiMlwiIGNsYXNzTmFtZT1cInctNCBoLTQgbWwtYXV0b1wiIHZpZXdCb3g9XCIwIDAgMjQgMjRcIj5cclxuICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPVwiTTUgMTJoMTRNMTIgNWw3IDctNyA3XCI+PC9wYXRoPlxyXG4gICAgICAgICAgICAgICAgICA8L3N2Zz5cclxuICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgeyhpdGVtLmF0dHJpYnV0ZXMuZm9vdGVyICE9IG51bGwpICYmIDxwIGNsYXNzPVwidGV4dC14cyB0ZXh0LWdyYXktNTAwIG10LTNcIj5Nb250aGx5IENoYXJnZXM6IOKCuXtpdGVtLmF0dHJpYnV0ZXMuZm9vdGVyfTwvcD59XHJcblxyXG4gICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8L2Rpdj4pXHJcbiAgICAgICAgICB9KX1cclxuXHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC9zZWN0aW9uPlxyXG4gIClcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcyhjb250ZXh0KSB7XHJcbiAgbGV0IGhlYWRlcnMgPSB7IEF1dGhvcml6YXRpb246IFwiQmVhcmVyIDJkMDdkY2IwNjRiMTE2ODgwMzVlNDQzOWViODM4MzYxODkzYjlkMzJjZDk4YjNiNjdiZjU2YTNiOGU2NGVjZDc5Zjk5ODVjM2M1MDI1ZTJjNjY5MzUwYzY3ZmVjODY0ZjMwYjM0OTdhNGE1ODExYjk3Yzc5ZWU2NzM0YjBiZDRkZjUyODU5MTVhOTI5MmQ5ODEzZTVjMTFjY2IzMDEwOTFhYTE5YjA4MGU1NTllNjg2Mzc1ZTU4YWIxNTQ1ZjkwYjQwZjZhNjQ1OTgwYzdhMDk3ZjYzYjUyOGQ2ZTAwODNmOWRiOGY1NjYwMGZhNmM0M2Y3MzFiMzAxNjFmNmQ2NjZcIiB9XHJcblxyXG4gIGxldCBhID0gYXdhaXQgZmV0Y2goYCR7cHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfU1RSQVBJX1VSTH0vYXBpL2FkdmVydGlzZW1lbnRzP3BvcHVsYXRlPSpgLCB7IGhlYWRlcnM6IGhlYWRlcnMgfSlcclxuXHJcbiAgbGV0IHBsYW5zID0gYXdhaXQgYS5qc29uKCk7XHJcblxyXG5cclxuICAvLyByZXMuc3RhdHVzKDIwMCkuanNvbih7IGJsb2cgfSlcclxuICByZXR1cm4ge1xyXG4gICAgcHJvcHM6IHsgcGxhbnM6IHBsYW5zIH0sIC8vIHdpbGwgYmUgcGFzc2VkIHRvIHRoZSBwYWdlIGNvbXBvbmVudCBhcyBwcm9wc1xyXG4gIH1cclxufVxyXG5leHBvcnQgZGVmYXVsdCBBZHZlcnRpc2VtZW50cyJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZUVmZmVjdCIsInVzZVN0YXRlIiwiQWR2ZXJ0aXNlbWVudHMiLCJwbGFucyIsInZhbGlkaXR5IiwiY2hlY2tjYXRlZ29yeSIsIm5ld3BsYW5zIiwiY29uc29sZSIsImxvZyIsImxlbmd0aCIsImRhdGEiLCJtYXAiLCJpdGVtIiwiYXR0cmlidXRlcyIsImNhdGVnb3J5IiwicHVzaCIsInNvcnQiLCJhIiwiYiIsImlkIiwic2VjdGlvbiIsImNsYXNzTmFtZSIsImRpdiIsImgxIiwicCIsImJ1dHRvbiIsIm9uQ2xpY2siLCJoMiIsIm5hbWUiLCJzcGFuIiwicHJpY2UiLCJzcGVjaWFsaXR5IiwiaXRlbTIiLCJpbmNsdWRlZCIsImltZyIsInNyYyIsImFsdCIsInBvaW50Iiwic3ZnIiwiZmlsbCIsInN0cm9rZSIsInN0cm9rZUxpbmVjYXAiLCJzdHJva2VMaW5lam9pbiIsInN0cm9rZVdpZHRoIiwidmlld0JveCIsInBhdGgiLCJkIiwiZm9vdGVyIiwiY2xhc3MiLCJfX2lkIiwiZ2V0U2VydmVyU2lkZVByb3BzIiwiY29udGV4dCIsImhlYWRlcnMiLCJBdXRob3JpemF0aW9uIiwiZmV0Y2giLCJwcm9jZXNzIiwiZW52IiwiTkVYVF9QVUJMSUNfU1RSQVBJX1VSTCIsImpzb24iLCJwcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/Services/Advertisements.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const Advertisements = ({ plans , validity , checkcategory  })=>{
+    let newplans = [];
+    console.log(newplans.length);
+    plans.data.map((item)=>{
+        if (item.attributes.category === checkcategory) newplans.push(item);
+    });
+    newplans.sort((a, b)=>{
+        return a.id - b.id; //To sort in ascending order
+    });
+    if (newplans.length === 0) {
+        validity(1);
+    }
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+        className: "text-gray-600 body-font overflow-hidden",
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: "container px-5 py-24 mx-auto",
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: "flex flex-col text-center w-full mb-20",
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                            className: "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900",
+                            children: "Pricing"
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                            className: "lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500",
+                            children: "Get Amazing discounts on yearly plans"
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "flex mx-auto border-2 border-black rounded overflow-hidden mt-6",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                    onClick: ()=>{
+                                        validity(1);
+                                    },
+                                    className: "validity py-1 px-4 focus:outline-none active:bg-purple-500",
+                                    children: "Monthly"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: "border border-black"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                    onClick: ()=>{
+                                        validity(6);
+                                    },
+                                    className: "validity py-1 px-4 focus:outline-none active:bg-purple-500",
+                                    children: "Semi-annually"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: "border border-black"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                    onClick: ()=>{
+                                        validity(12);
+                                    },
+                                    className: "validity py-1 px-4 focus:outline-none active:bg-purple-500",
+                                    children: "Annually"
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: "flex flex-wrap place-content-center",
+                    children: newplans.map((item)=>{
+                        return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full",
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col overflow-hidden",
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                                        className: "text-sm tracking-widest title-font mb-1 font-medium",
+                                        children: item.attributes.name
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h1", {
+                                        className: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                children: [
+                                                    "\u20B9",
+                                                    item.attributes.price
+                                                ]
+                                            }),
+                                            item.attributes.category != "Null" && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                className: "text-lg ml-1 font-normal text-gray-500",
+                                                children: [
+                                                    "/",
+                                                    item.attributes.category
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    item.attributes.speciality.map((item2)=>{
+                                        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                            className: "flex items-center text-gray-600 mb-2",
+                                            children: [
+                                                item2.included && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                                    className: "h-4 w-4 mr-2",
+                                                    src: "/icons/checked.png",
+                                                    alt: ""
+                                                }),
+                                                !item2.included && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                                    className: "h-4 w-4 mr-2",
+                                                    src: "/icons/cancel.png",
+                                                    alt: ""
+                                                }),
+                                                item2.point
+                                            ]
+                                        }, item2.id);
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
+                                        className: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded ",
+                                        children: [
+                                            "Button",
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: "2",
+                                                className: "w-4 h-4 ml-auto",
+                                                viewBox: "0 0 24 24",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+                                                    d: "M5 12h14M12 5l7 7-7 7"
+                                                })
+                                            })
+                                        ]
+                                    }),
+                                    item.attributes.footer != null && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                        className: "text-xs text-gray-500 mt-3",
+                                        children: [
+                                            "Monthly Charges: \u20B9",
+                                            item.attributes.footer
+                                        ]
+                                    })
+                                ]
+                            })
+                        }, item.id);
+                    })
+                })
+            ]
+        })
+    });
+};
+async function getServerSideProps(context) {
+    let headers = {
+        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`
+    };
+    let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/advertisements?populate=*`, {
+        headers: headers
+    });
+    let plans = await a.json();
+    // res.status(200).json({ blog })
+    return {
+        props: {
+            plans: plans
+        }
+    };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Advertisements);
+
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -50,7 +205,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/Services/Advertisements.js"));
+var __webpack_exports__ = (__webpack_exec__(8707));
 module.exports = __webpack_exports__;
 
 })();

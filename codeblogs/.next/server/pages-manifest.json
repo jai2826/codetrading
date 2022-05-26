@@ -1,8 +1,18 @@
 {
+  "/Aboutus": "pages/Aboutus.html",
+  "/Services": "pages/Services.html",
+  "/Signup": "pages/Signup.html",
+  "/api/hello": "pages/api/hello.js",
   "/_app": "pages/_app.js",
+  "/text": "pages/text.html",
+  "/": "pages/index.html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/Techhub": "pages/Techhub.js",
+  "/Blog/[slug]": "pages/Blog/[slug].js",
+  "/Services/Advertisements": "pages/Services/Advertisements.js",
+  "/Guides": "pages/Guides.js",
   "/Launchpad": "pages/Launchpad.js",
-  "/Guides": "pages/Guides.js"
+  "/Services/Websitebuild": "pages/Services/Websitebuild.js",
+  "/Techhub": "pages/Techhub.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }

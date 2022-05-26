@@ -1,45 +1,217 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/Services/Websitebuild";
-exports.ids = ["pages/Services/Websitebuild"];
+exports.id = 996;
+exports.ids = [996];
 exports.modules = {
 
-/***/ "./pages/Services/Websitebuild.js":
-/*!****************************************!*\
-  !*** ./pages/Services/Websitebuild.js ***!
-  \****************************************/
+/***/ 4560:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconst Websitebuild = ({ plans , validity , checkcategory  })=>{\n    let newplans = [];\n    plans.data.map((item)=>{\n        if (item.attributes.category === checkcategory) newplans.push(item);\n    });\n    newplans.sort((a, b)=>{\n        return a.id - b.id; //To sort in ascending order\n    });\n    if (newplans.length === 0) {\n        validity(0);\n    }\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n        className: \"text-gray-600 body-font overflow-hidden\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"container px-5 py-24 mx-auto\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"flex flex-col text-center w-full mb-20\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                            className: \"sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900\",\n                            children: \"Pricing\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                            lineNumber: 27,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            className: \"lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500\",\n                            children: \"Get Amazing discounts on yearly plans\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                            lineNumber: 28,\n                            columnNumber: 11\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"flex h-20 items-center mx-auto space-x-20 content-center \",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h5\", {\n                                    children: \"Add a maintenance plan\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                    lineNumber: 30,\n                                    columnNumber: 11\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"flex mx-auto border-2 border-black rounded overflow-hidden \",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                            onClick: ()=>{\n                                                validity(1);\n                                            },\n                                            className: \"validity py-1 px-4 active:bg-purple-500\",\n                                            children: \"Monthly\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 32,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"border border-black\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 33,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                            onClick: ()=>{\n                                                validity(6);\n                                            },\n                                            className: \"validity py-1 px-4 active:bg-purple-500\",\n                                            children: \"Semi-annually\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 34,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"border border-black\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 35,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                            onClick: ()=>{\n                                                validity(12);\n                                            },\n                                            className: \"validity py-1 px-4 active:bg-purple-500\",\n                                            children: \"Annually\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 36,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"border border-black\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 37,\n                                            columnNumber: 13\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                            onClick: ()=>{\n                                                validity(0);\n                                            },\n                                            className: \"validity py-1 px-4 active:bg-purple-500\",\n                                            children: \"No need\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 38,\n                                            columnNumber: 13\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                    lineNumber: 31,\n                                    columnNumber: 11\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                            lineNumber: 29,\n                            columnNumber: 11\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                    lineNumber: 26,\n                    columnNumber: 9\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"flex flex-wrap place-content-center \",\n                    children: newplans.map((item)=>{\n                        return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col overflow-hidden\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                                        className: \"text-sm tracking-widest title-font mb-1 font-medium\",\n                                        children: item.attributes.name\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                        lineNumber: 49,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                                        className: \"text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                children: [\n                                                    \"\\u20B9\",\n                                                    item.attributes.price\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                lineNumber: 51,\n                                                columnNumber: 19\n                                            }, undefined),\n                                            item.attributes.category != \"Null\" && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                className: \"text-lg ml-1 font-normal text-gray-500\",\n                                                children: [\n                                                    \"/\",\n                                                    item.attributes.category\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                lineNumber: 52,\n                                                columnNumber: 60\n                                            }, undefined)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                        lineNumber: 50,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    item.attributes.Speciality.map((item2)=>{\n                                        return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                            className: \"flex items-center text-gray-600 mb-2\",\n                                            children: [\n                                                item2.included && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    className: \"h-4 w-4 mr-2\",\n                                                    src: \"/icons/checked.png\",\n                                                    alt: \"\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                    lineNumber: 57,\n                                                    columnNumber: 40\n                                                }, undefined),\n                                                !item2.included && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    className: \"h-4 w-4 mr-2\",\n                                                    src: \"/icons/cancel.png\",\n                                                    alt: \"\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                    lineNumber: 58,\n                                                    columnNumber: 41\n                                                }, undefined),\n                                                item2.point\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                            lineNumber: 56,\n                                            columnNumber: 27\n                                        }, undefined);\n                                    }),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                        className: \"flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded \",\n                                        children: [\n                                            \"Button\",\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                                                fill: \"none\",\n                                                stroke: \"currentColor\",\n                                                strokeLinecap: \"round\",\n                                                strokeLinejoin: \"round\",\n                                                strokeWidth: \"2\",\n                                                className: \"w-4 h-4 ml-auto\",\n                                                viewBox: \"0 0 24 24\",\n                                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                                                    d: \"M5 12h14M12 5l7 7-7 7\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                    lineNumber: 64,\n                                                    columnNumber: 21\n                                                }, undefined)\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                                lineNumber: 63,\n                                                columnNumber: 19\n                                            }, undefined)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                        lineNumber: 62,\n                                        columnNumber: 17\n                                    }, undefined),\n                                    item.attributes.footer != null && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        class: \"text-xs text-gray-500 mt-3\",\n                                        children: [\n                                            \"Maintenance Charges: \\u20B9\",\n                                            item.attributes.footer\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                        lineNumber: 67,\n                                        columnNumber: 54\n                                    }, undefined)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                                lineNumber: 48,\n                                columnNumber: 15\n                            }, undefined)\n                        }, item.__id, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                            lineNumber: 47,\n                            columnNumber: 21\n                        }, undefined);\n                    })\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n                    lineNumber: 44,\n                    columnNumber: 9\n                }, undefined)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n            lineNumber: 25,\n            columnNumber: 7\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\blogging - Copy\\\\codetrading\\\\codeblogs\\\\pages\\\\Services\\\\Websitebuild.js\",\n        lineNumber: 24,\n        columnNumber: 5\n    }, undefined);\n};\nasync function getServerSideProps(context) {\n    let headers = {\n        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`\n    };\n    let a = await fetch(`${\"http://localhost:1337\"}/api/web-buildings?populate=*`, {\n        headers: headers\n    });\n    let plans = await a.json();\n    // res.status(200).json({ blog })\n    return {\n        props: {\n            plans: plans\n        }\n    };\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Websitebuild);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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YnNpdGVidWlsZC5qcz8yOTMzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcclxuaW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0J1xyXG5cclxuXHJcblxyXG5cclxuXHJcbmNvbnN0IFdlYnNpdGVidWlsZCA9ICh7IHBsYW5zLCB2YWxpZGl0eSwgY2hlY2tjYXRlZ29yeSB9KSA9PiB7XHJcbiAgbGV0IG5ld3BsYW5zID0gW107XHJcblxyXG4gIHBsYW5zLmRhdGEubWFwKGl0ZW0gPT4ge1xyXG4gICAgaWYgKGl0ZW0uYXR0cmlidXRlcy5jYXRlZ29yeSA9PT0gY2hlY2tjYXRlZ29yeSlcclxuICAgICAgbmV3cGxhbnMucHVzaChpdGVtKVxyXG4gIH0pXHJcbiAgbmV3cGxhbnMuc29ydCgoYSwgYikgPT4ge1xyXG4gICAgcmV0dXJuIGEuaWQgLSBiLmlkOyAgIC8vVG8gc29ydCBpbiBhc2NlbmRpbmcgb3JkZXJcclxuICB9KTtcclxuICBpZiAobmV3cGxhbnMubGVuZ3RoID09PSAwKSB7XHJcbiAgICB2YWxpZGl0eSgwKTtcclxuICB9XHJcbiAgXHJcbiAgcmV0dXJuIChcclxuICAgIFxyXG4gICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwidGV4dC1ncmF5LTYwMCBib2R5LWZvbnQgb3ZlcmZsb3ctaGlkZGVuXCI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyIHB4LTUgcHktMjQgbXgtYXV0b1wiPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCB0ZXh0LWNlbnRlciB3LWZ1bGwgbWItMjBcIj5cclxuICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJzbTp0ZXh0LTR4bCB0ZXh0LTN4bCBmb250LW1lZGl1bSB0aXRsZS1mb250IG1iLTIgdGV4dC1ncmF5LTkwMFwiPlByaWNpbmc8L2gxPlxyXG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwibGc6dy0yLzMgbXgtYXV0byBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1iYXNlIHRleHQtZ3JheS01MDBcIj5HZXQgQW1hemluZyBkaXNjb3VudHMgb24geWVhcmx5IHBsYW5zPC9wPlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGgtMjAgaXRlbXMtY2VudGVyIG14LWF1dG8gc3BhY2UteC0yMCBjb250ZW50LWNlbnRlciBcIj5cclxuICAgICAgICAgIDxoNSA+QWRkIGEgbWFpbnRlbmFuY2UgcGxhbjwvaDU+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggbXgtYXV0byBib3JkZXItMiBib3JkZXItYmxhY2sgcm91bmRlZCBvdmVyZmxvdy1oaWRkZW4gXCI+XHJcbiAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4geyB2YWxpZGl0eSgxKSB9fSBjbGFzc05hbWU9XCJ2YWxpZGl0eSBweS0xIHB4LTQgIGFjdGl2ZTpiZy1wdXJwbGUtNTAwXCI+TW9udGhseTwvYnV0dG9uPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJvcmRlciBib3JkZXItYmxhY2tcIj48L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiB7IHZhbGlkaXR5KDYpIH19IGNsYXNzTmFtZT1cInZhbGlkaXR5IHB5LTEgcHgtNCAgYWN0aXZlOmJnLXB1cnBsZS01MDBcIj5TZW1pLWFubnVhbGx5PC9idXR0b24+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYm9yZGVyIGJvcmRlci1ibGFja1wiPjwvZGl2PlxyXG4gICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9eygpID0+IHsgdmFsaWRpdHkoMTIpIH19IGNsYXNzTmFtZT1cInZhbGlkaXR5IHB5LTEgcHgtNCAgYWN0aXZlOmJnLXB1cnBsZS01MDBcIj5Bbm51YWxseTwvYnV0dG9uPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJvcmRlciBib3JkZXItYmxhY2tcIj48L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiB7IHZhbGlkaXR5KDApIH19IGNsYXNzTmFtZT1cInZhbGlkaXR5IHB5LTEgcHgtNCAgYWN0aXZlOmJnLXB1cnBsZS01MDBcIj5ObyBuZWVkPC9idXR0b24+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICAgIFxyXG4gICAgICAgICAgXHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtd3JhcCBwbGFjZS1jb250ZW50LWNlbnRlciBcIj5cclxuXHJcbiAgICAgICAgICB7bmV3cGxhbnMubWFwKChpdGVtKSA9PiB7XHJcbiAgICAgICAgICAgIHJldHVybiAoPGRpdiBrZXk9e2l0ZW0uX19pZH0gY2xhc3NOYW1lPVwicC00IHhsOnctMS80IG1heC1oLTEyOCBtZDp3LTEvMiB3LWZ1bGxcIj5cclxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtZnVsbCBwLTYgcm91bmRlZC1sZyBib3JkZXItMiBib3JkZXItZ3JheS0zMDAgZmxleCBmbGV4LWNvbCAgb3ZlcmZsb3ctaGlkZGVuXCI+XHJcbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC1zbSB0cmFja2luZy13aWRlc3QgdGl0bGUtZm9udCBtYi0xIGZvbnQtbWVkaXVtXCI+e2l0ZW0uYXR0cmlidXRlcy5uYW1lfTwvaDI+XHJcbiAgICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwidGV4dC01eGwgdGV4dC1ncmF5LTkwMCBsZWFkaW5nLW5vbmUgZmxleCBpdGVtcy1jZW50ZXIgcGItNCBtYi00IGJvcmRlci1iIGJvcmRlci1ncmF5LTIwMFwiPlxyXG4gICAgICAgICAgICAgICAgICA8c3Bhbj7igrl7aXRlbS5hdHRyaWJ1dGVzLnByaWNlfTwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgeyhpdGVtLmF0dHJpYnV0ZXMuY2F0ZWdvcnkgIT0gXCJOdWxsXCIpICYmIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtbGcgbWwtMSBmb250LW5vcm1hbCB0ZXh0LWdyYXktNTAwXCI+L3tpdGVtLmF0dHJpYnV0ZXMuY2F0ZWdvcnl9PC9zcGFuPn1cclxuICAgICAgICAgICAgICAgIDwvaDE+XHJcblxyXG4gICAgICAgICAgICAgICAge2l0ZW0uYXR0cmlidXRlcy5TcGVjaWFsaXR5Lm1hcCgoaXRlbTIpID0+IHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuICg8cCBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciB0ZXh0LWdyYXktNjAwIG1iLTJcIj5cclxuICAgICAgICAgICAgICAgICAgICB7aXRlbTIuaW5jbHVkZWQgJiYgPGltZyBjbGFzc05hbWU9J2gtNCB3LTQgbXItMicgc3JjPVwiL2ljb25zL2NoZWNrZWQucG5nXCIgYWx0PVwiXCIgLz59XHJcbiAgICAgICAgICAgICAgICAgICAgeyFpdGVtMi5pbmNsdWRlZCAmJiA8aW1nIGNsYXNzTmFtZT0naC00IHctNCBtci0yJyBzcmM9XCIvaWNvbnMvY2FuY2VsLnBuZ1wiIGFsdD1cIlwiIC8+fVxyXG4gICAgICAgICAgICAgICAgICAgIHtpdGVtMi5wb2ludH1cclxuICAgICAgICAgICAgICAgICAgPC9wPilcclxuICAgICAgICAgICAgICAgIH0pfVxyXG4gICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBtdC1hdXRvIHRleHQtd2hpdGUgYmctZ3JheS00MDAgYm9yZGVyLTAgcHktMiBweC00IHctZnVsbCBmb2N1czpvdXRsaW5lLW5vbmUgaG92ZXI6YmctZ3JheS01MDAgcm91bmRlZCBcIj5CdXR0b25cclxuICAgICAgICAgICAgICAgICAgPHN2ZyBmaWxsPVwibm9uZVwiIHN0cm9rZT1cImN1cnJlbnRDb2xvclwiIHN0cm9rZUxpbmVjYXA9XCJyb3VuZFwiIHN0cm9rZUxpbmVqb2luPVwicm91bmRcIiBzdHJva2VXaWR0aD1cIjJcIiBjbGFzc05hbWU9XCJ3LTQgaC00IG1sLWF1dG9cIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD1cIk01IDEyaDE0TTEyIDVsNyA3LTcgN1wiPjwvcGF0aD5cclxuICAgICAgICAgICAgICAgICAgPC9zdmc+XHJcbiAgICAgICAgICAgICAgICA8L2J1dHRvbj5cclxuICAgICAgICAgICAgICAgIHsoaXRlbS5hdHRyaWJ1dGVzLmZvb3RlciAhPSBudWxsKSAmJiA8cCBjbGFzcz1cInRleHQteHMgdGV4dC1ncmF5LTUwMCBtdC0zXCI+TWFpbnRlbmFuY2UgQ2hhcmdlczog4oK5e2l0ZW0uYXR0cmlidXRlcy5mb290ZXJ9PC9wPn1cclxuICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPC9kaXY+KVxyXG4gICAgICAgICAgfSl9XHJcblxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICA8L2Rpdj5cclxuICAgIDwvc2VjdGlvbj5cclxuICApXHJcbn1cclxuXHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTZXJ2ZXJTaWRlUHJvcHMoY29udGV4dCkge1xyXG4gIGxldCBoZWFkZXJzID0geyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7cHJvY2Vzcy5lbnYuU1RSQVBJX1RPS0VOfWAgfVxyXG5cclxuICBsZXQgYSA9IGF3YWl0IGZldGNoKGAke3Byb2Nlc3MuZW52Lk5FWFRfUFVCTElDX1NUUkFQSV9VUkx9L2FwaS93ZWItYnVpbGRpbmdzP3BvcHVsYXRlPSpgLCB7IGhlYWRlcnM6IGhlYWRlcnMgfSlcclxuXHJcbiAgbGV0IHBsYW5zID0gYXdhaXQgYS5qc29uKCk7XHJcblxyXG5cclxuICAvLyByZXMuc3RhdHVzKDIwMCkuanNvbih7IGJsb2cgfSlcclxuICByZXR1cm4ge1xyXG4gICAgcHJvcHM6IHsgcGxhbnM6IHBsYW5zIH0sIC8vIHdpbGwgYmUgcGFzc2VkIHRvIHRoZSBwYWdlIGNvbXBvbmVudCBhcyBwcm9wc1xyXG4gIH1cclxufVxyXG5leHBvcnQgZGVmYXVsdCBXZWJzaXRlYnVpbGQiXSwibmFtZXMiOlsiUmVhY3QiLCJ1c2VFZmZlY3QiLCJ1c2VTdGF0ZSIsIldlYnNpdGVidWlsZCIsInBsYW5zIiwidmFsaWRpdHkiLCJjaGVja2NhdGVnb3J5IiwibmV3cGxhbnMiLCJkYXRhIiwibWFwIiwiaXRlbSIsImF0dHJpYnV0ZXMiLCJjYXRlZ29yeSIsInB1c2giLCJzb3J0IiwiYSIsImIiLCJpZCIsImxlbmd0aCIsInNlY3Rpb24iLCJjbGFzc05hbWUiLCJkaXYiLCJoMSIsInAiLCJoNSIsImJ1dHRvbiIsIm9uQ2xpY2siLCJoMiIsIm5hbWUiLCJzcGFuIiwicHJpY2UiLCJTcGVjaWFsaXR5IiwiaXRlbTIiLCJpbmNsdWRlZCIsImltZyIsInNyYyIsImFsdCIsInBvaW50Iiwic3ZnIiwiZmlsbCIsInN0cm9rZSIsInN0cm9rZUxpbmVjYXAiLCJzdHJva2VMaW5lam9pbiIsInN0cm9rZVdpZHRoIiwidmlld0JveCIsInBhdGgiLCJkIiwiZm9vdGVyIiwiY2xhc3MiLCJfX2lkIiwiZ2V0U2VydmVyU2lkZVByb3BzIiwiY29udGV4dCIsImhlYWRlcnMiLCJBdXRob3JpemF0aW9uIiwicHJvY2VzcyIsImVudiIsIlNUUkFQSV9UT0tFTiIsImZldGNoIiwiTkVYVF9QVUJMSUNfU1RSQVBJX1VSTCIsImpzb24iLCJwcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/Services/Websitebuild.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+const Websitebuild = ({ plans , validity , checkcategory  })=>{
+    let newplans = [];
+    plans.data.map((item)=>{
+        if (item.attributes.category === checkcategory) newplans.push(item);
+    });
+    newplans.sort((a, b)=>{
+        return a.id - b.id; //To sort in ascending order
+    });
+    if (newplans.length === 0) {
+        validity(0);
+    }
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+        className: "text-gray-600 body-font overflow-hidden",
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: "container px-5 py-24 mx-auto",
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: "flex flex-col text-center w-full mb-20",
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                            className: "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900",
+                            children: "Pricing"
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                            className: "lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500",
+                            children: "Get Amazing discounts on yearly plans"
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "flex h-20 items-center mx-auto space-x-20 content-center ",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h5", {
+                                    children: "Add a maintenance plan"
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: "flex mx-auto border-2 border-black rounded overflow-hidden ",
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                            onClick: ()=>{
+                                                validity(1);
+                                            },
+                                            className: "validity py-1 px-4 active:bg-purple-500",
+                                            children: "Monthly"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: "border border-black"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                            onClick: ()=>{
+                                                validity(6);
+                                            },
+                                            className: "validity py-1 px-4 active:bg-purple-500",
+                                            children: "Semi-annually"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: "border border-black"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                            onClick: ()=>{
+                                                validity(12);
+                                            },
+                                            className: "validity py-1 px-4 active:bg-purple-500",
+                                            children: "Annually"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: "border border-black"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                            onClick: ()=>{
+                                                validity(0);
+                                            },
+                                            className: "validity py-1 px-4 active:bg-purple-500",
+                                            children: "No need"
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: "flex flex-wrap place-content-center ",
+                    children: newplans.map((item)=>{
+                        return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full",
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col overflow-hidden",
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                                        className: "text-sm tracking-widest title-font mb-1 font-medium",
+                                        children: item.attributes.name
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h1", {
+                                        className: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                children: [
+                                                    "\u20B9",
+                                                    item.attributes.price
+                                                ]
+                                            }),
+                                            item.attributes.category != "Null" && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                className: "text-lg ml-1 font-normal text-gray-500",
+                                                children: [
+                                                    "/",
+                                                    item.attributes.category
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    item.attributes.Speciality.map((item2)=>{
+                                        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                            className: "flex items-center text-gray-600 mb-2",
+                                            children: [
+                                                item2.included && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                                    className: "h-4 w-4 mr-2",
+                                                    src: "/icons/checked.png",
+                                                    alt: ""
+                                                }),
+                                                !item2.included && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                                    className: "h-4 w-4 mr-2",
+                                                    src: "/icons/cancel.png",
+                                                    alt: ""
+                                                }),
+                                                item2.point
+                                            ]
+                                        }, item2.id);
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
+                                        className: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded ",
+                                        children: [
+                                            "Button",
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: "2",
+                                                className: "w-4 h-4 ml-auto",
+                                                viewBox: "0 0 24 24",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+                                                    d: "M5 12h14M12 5l7 7-7 7"
+                                                })
+                                            })
+                                        ]
+                                    }),
+                                    item.attributes.footer != null && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                        className: "text-xs text-gray-500 mt-3",
+                                        children: [
+                                            "Maintenance Charges: \u20B9",
+                                            item.attributes.footer
+                                        ]
+                                    })
+                                ]
+                            })
+                        }, item.id);
+                    })
+                })
+            ]
+        })
+    });
+};
+async function getServerSideProps(context) {
+    let headers = {
+        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`
+    };
+    let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/web-buildings?populate=*`, {
+        headers: headers
+    });
+    let plans = await a.json();
+    // res.status(200).json({ blog })
+    return {
+        props: {
+            plans: plans
+        }
+    };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Websitebuild);
+
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -50,7 +222,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/Services/Websitebuild.js"));
+var __webpack_exports__ = (__webpack_exec__(4560));
 module.exports = __webpack_exports__;
 
 })();
