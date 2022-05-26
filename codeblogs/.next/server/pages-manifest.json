@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/Techhub": "pages/Techhub.js",
-  "/Blog/[slug]": "pages/Blog/[slug].js"
+  "/Launchpad": "pages/Launchpad.js",
+  "/Guides": "pages/Guides.js"
 }

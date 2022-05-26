@@ -20,10 +20,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/Blog/[slug]": [
+    "/Aboutus": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Blog/[slug].js"
+      "static/chunks/pages/Aboutus.js"
+    ],
+    "/Guides": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Guides.js"
+    ],
+    "/Launchpad": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Launchpad.js"
     ],
     "/Techhub": [
       "static/chunks/webpack.js",

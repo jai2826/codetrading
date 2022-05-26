@@ -124,7 +124,7 @@ const Techhub = ({ blogs }) => {
 
 export async function getServerSideProps(context) {
   let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
-  let a = await fetch("http://localhost:1337/api/blogs?populate=*", { headers: headers })
+  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?populate=*`, { headers: headers })
   let blogs = await a.json();
   // res.status(200).json({ blog })
   return {
