@@ -19,10 +19,10 @@ const Footer = () => {
           <div className="lg:w-1/3 md:w-1/2 w-full px-3">
             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-sm mb-3 px-2 text-left"> Contact Us</h2>
             <nav className="list-none mb-10 flex flex-col">
-              <a href='https://react-icons.github.io/react-icons/search?q=email' target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <HiOutlineMail/> <span> Email </span></a>
-              <a href='https://react-icons.github.io/react-icons/search?q=email' target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiFacebookBoxLine/> <span> Facebook</span></a>
-              <a href='https://react-icons.github.io/react-icons/search?q=email' target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiInstagramLine/> <span> Instagram </span></a>
-              <a href='https://react-icons.github.io/react-icons/search?q=email' target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiTwitterLine/> <span> Twitter </span></a>
+              <a href='https://react-icons.github.io/react-icons/search?q=email' rel="noreferrer" target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <HiOutlineMail/> <span> Email </span></a>
+              <a href='https://react-icons.github.io/react-icons/search?q=email' rel="noreferrer" target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiFacebookBoxLine/> <span> Facebook</span></a>
+              <a href='https://react-icons.github.io/react-icons/search?q=email' rel="noreferrer" target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiInstagramLine/> <span> Instagram </span></a>
+              <a href='https://react-icons.github.io/react-icons/search?q=email' rel="noreferrer" target={'_blank'} className="flex items-center space-x-2 hover:bg-purple-500 w-fit px-2 py-1 rounded-md"> <RiTwitterLine/> <span> Twitter </span></a>
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">

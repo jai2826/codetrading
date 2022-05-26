@@ -39,7 +39,7 @@ const Advertisements = ({ plans, validity, checkcategory }) => {
         <div className="flex flex-wrap place-content-center">
 
           {newplans.map((item) => {
-            return (<div key={item.__id} className="p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full">
+            return (<div key={item.id} className="p-4 xl:w-1/4 max-h-128 md:w-1/2 w-full">
               <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col  overflow-hidden">
                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">{item.attributes.name}</h2>
                 <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
@@ -48,7 +48,7 @@ const Advertisements = ({ plans, validity, checkcategory }) => {
                 </h1>
 
                 {item.attributes.speciality.map((item2) => {
-                  return (<p className="flex items-center text-gray-600 mb-2">
+                  return (<p key={item2.id} className="flex items-center text-gray-600 mb-2">
                     {item2.included && <img className='h-4 w-4 mr-2' src="/icons/checked.png" alt="" />}
                     {!item2.included && <img className='h-4 w-4 mr-2' src="/icons/cancel.png" alt="" />}
                     {item2.point}
@@ -59,7 +59,7 @@ const Advertisements = ({ plans, validity, checkcategory }) => {
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
                 </button>
-                {(item.attributes.footer != null) && <p class="text-xs text-gray-500 mt-3">Monthly Charges: ₹{item.attributes.footer}</p>}
+                {(item.attributes.footer != null) && <p className="text-xs text-gray-500 mt-3">Monthly Charges: ₹{item.attributes.footer}</p>}
 
               </div>
             </div>)
