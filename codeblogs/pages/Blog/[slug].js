@@ -56,8 +56,8 @@ const post = ({ blog, post }) => {
 //   }
 // export default post
 export async function getServerSideProps(context) {
-    let headers = { Authorization: `Bearer STRAPI_TOKEN }
-    let a = await fetch(`${NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[slug][$eq]=${context.query.slug}` +`&populate=*`, { headers: headers })
+    let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
+    let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[slug][$eq]=${context.query.slug}` +`&populate=*`, { headers: headers })
     let blog = await a.json();
     let blogpost = blog.data[0].attributes.post;
 
