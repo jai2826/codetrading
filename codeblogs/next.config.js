@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  images: {
-    loader: "default",
-    domains: ["localhost"],
-  },
+    images: {
+          domains: [process.env.NEXT_PUBLIC_STRAPI_URL],
+        },
 };
