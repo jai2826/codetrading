@@ -50,7 +50,7 @@ const Techhub = ({ blogs }) => {
             {newblogs && newblogs.slice(0, visible).map(item => { 
               return (<div key={item.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg  lg:w-1/4 md:w-1/2  p-4 ">
               <div >
-                <img className="object-cover item object-center w-80 self-center " src={ item.attributes.image.data && item.attributes.image.data.attributes.name } alt=""/>
+                <img className="object-cover item object-center w-80 self-center " src={ item.attributes.image.data && urlBuilder(item.attributes.image.data.attributes.url) } alt=""/>
               </div>
               <Link href={`/Blog/${item.attributes.slug}`} className="flex flex-col justify-between p-10  bg-white">
                 <div className="flex-1">
@@ -64,7 +64,7 @@ const Techhub = ({ blogs }) => {
                   <div className="flex-shrink-0">
                     <a href="https://twitter.com/Mike_Andreuzza">
                       <span className="sr-only">{item.attributes.author.data.attributes.name}</span>
-                      <img className="w-10 h-10 rounded-full" src="https://d33wubrfki0l68.cloudfront.net/2f76102fd18a4e095eaed7a836a3f2183a982a4d/91dd4/images/avatar.jpg" alt=""/>
+//                       {/*<img className="w-10 h-10 rounded-full" src="" alt=""/>*/}
                     </a>
 
                   </div>
