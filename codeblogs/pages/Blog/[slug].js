@@ -17,7 +17,7 @@ const post = ({ blog, post }) => {
     return <section className="container px-5 mx-auto flex flex-col  ">
             <div className="lg:w-4/6 mx-auto bg-white border-2 rounded-md">
                 <div className="rounded-md  overflow-hidden">
-                    { blog.attributes.image.data && <img alt="content" className=" object-center max-h-128 border-b-2"  src={urlBuilder(blog.attributes.image.data.attributes.url)} width="1200" height="1500"/>}
+                    { blog.attributes.image.data && <Image alt="content" className=" object-center max-h-128 border-b-2"  src={urlBuilder(blog.attributes.image.data.attributes.url)} width="1200" height="1500"/>}
                 </div>
                 
                 <div className="flex flex-col mt-8">
