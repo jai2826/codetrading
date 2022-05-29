@@ -1,5 +1,5 @@
 codeblogs/.env.local
 codeblogs/node_modules
 backend/.env
-backend/envdata.text
+backend/config/database.js
 backend/node_modules
