@@ -1,28 +1,20 @@
-import { useRouter } from "next/router";
-import Image from 'next/image'
-import Blogs from '../../models/Blogs'
-import Authors from '../../models/Authors'
-import mongoose from "mongoose";
-import ReactMarkdown from "react-markdown";
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
-const ReactDOMServer = require('react-dom/server');
-const HtmlToReactParser = require('html-to-react').Parser;
+
+import React from 'react';
+
 
 const post = ({ blog, post }) => {
-    const htmlToReactParser = new HtmlToReactParser();
-    const reactElement = htmlToReactParser.parse(post);
-    const reactHtml = ReactDOMServer.renderToStaticMarkup(reactElement);
+
 
     return <section className="container px-5 mx-auto flex flex-col  ">
             <div className="lg:w-4/6 mx-auto bg-white border-2 rounded-md">
-                <div className="rounded-md  overflow-hidden">
-                    { blog.attributes.image.data && <Image alt="content" className=" object-center max-h-128 border-b-2"  src={urlBuilder(blog.attributes.image.data.attributes.url)} width="1200" height="1500"/>}
+                <div className=""></div>
+                <div className="rounded-md  overflow-hidden ">
+                {blog.attributes.image.data && <img alt="content" className="object-center place-self-stretch border-b-2 " src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.attributes.image.data.attributes.url} />}
                 </div>
                 
                 <div className="flex flex-col mt-8">
                 <h3>{blog && blog.attributes.title}</h3>
-                <div className="container py-4  rounded-md mb-2 w-full" dangerouslySetInnerHTML={{__html:reactHtml}}>
+                <div className="container p-4  rounded-md mb-2 w-full" dangerouslySetInnerHTML={{__html:post}}>
                 </div>
                     <div className=" text-center lg:flex  border-t-2  h-auto p-6 ">
                         <div className="lg:self-center items-center">

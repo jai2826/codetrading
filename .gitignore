@@ -1,2 +1,4 @@
-.env.local
-.env
+codeblogs/.env.local
+codeblogs/node_modules
+backend/.env
+backend/node_modules

@@ -50,7 +50,7 @@ const Techhub = ({ blogs }) => {
             {newblogs && newblogs.slice(0, visible).map(item => { 
               return (<div key={item.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg  lg:w-1/4 md:w-1/2  p-4 ">
               <div >
-                <img className="object-cover item object-center w-80 self-center " src={ item.attributes.image.data && urlBuilder(item.attributes.image.data.attributes.url) } alt=""/>
+                  {item.attributes.image.data && <img className="object-cover item object-center w-80 self-center " src={process.env.NEXT_PUBLIC_STRAPI_URL + item.attributes.image.data.attributes.url} width={1200} height={1000} alt=""/>}
               </div>
               <Link href={`/Blog/${item.attributes.slug}`} className="flex flex-col justify-between p-10  bg-white">
                 <div className="flex-1">
