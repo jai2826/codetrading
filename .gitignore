@@ -1,5 +1,5 @@
-**codeblogs/.env.local
-**codeblogs/node_modules
-**backend/.env
-**backend/envdata.text
-**backend/node_modules
+codeblogs/.env.local
+codeblogs/node_modules
+backend/.env
+backend/envdata.text
+backend/node_modules
