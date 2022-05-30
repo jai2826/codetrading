@@ -1,5 +1,4 @@
  /* eslint-disable */
 {
-  "extends": "next",
-  "rules": "disable"
+  "extends": "next"
 }
