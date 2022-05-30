@@ -11,7 +11,7 @@ const Navbar = () => {
           <Image className="rounded-lg" src="/logo.png" alt="codeblogs"width="80" height="72" />
           <p className='m-2 font-bold text-purple-500'>Codeblogs.in</p>
         </div>
-      <ul className=" flex items-center w-screen place-content-center ">
+      <ul className=" flex items-center w-screen place-content-center lg:place-content-end px-12 ">
           <Link  href={'/'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Home</li></a></Link>
           <Link  href={'/Techhub'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Tech Hub</li></a></Link>
           <Link  href={'/Launchpad'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Launch Pad</li></a></Link>

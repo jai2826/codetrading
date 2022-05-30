@@ -6,14 +6,12 @@ const post = ({ blog, post }) => {
 
 
     return <section className="container px-5 mx-auto flex flex-col  ">
-            <div className="lg:w-4/6 mx-auto bg-white border-2 rounded-md">
-                <div className=""></div>
-                <div className="rounded-md  overflow-hidden ">
-                {blog.attributes.image.data && <img alt="content" className="object-center place-self-stretch border-b-2 " src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.attributes.image.data.attributes.url} />}
-                </div>
-                
-                <div className="flex flex-col mt-8">
-                <h3>{blog && blog.attributes.title}</h3>
+            <div className="lg:w-4/6 mx-auto  bg-white border-2 rounded-md">
+            {blog.attributes.image.data && <div className="rounded-md  md:max-h-128 overflow-hidden ">
+                <img alt="content" className="object-center h-60 md:h-128 w-full  place-self-stretch border-b-2" src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.attributes.image.data.attributes.url} />
+                </div>}
+                <div className="flex flex-col mt-4 p-4">
+                <h1>{blog && blog.attributes.title}</h1>
                 <div className="container p-4  rounded-md mb-2 w-full" dangerouslySetInnerHTML={{__html:post}}>
                 </div>
                     <div className=" text-center lg:flex  border-t-2  h-auto p-6 ">

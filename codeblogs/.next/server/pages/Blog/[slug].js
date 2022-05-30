@@ -1,146 +1,45 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 418;
-exports.ids = [418];
+exports.id = "pages/Blog/[slug]";
+exports.ids = ["pages/Blog/[slug]"];
 exports.modules = {
 
-/***/ 5988:
+/***/ "./pages/Blog/[slug].js":
+/*!******************************!*\
+  !*** ./pages/Blog/[slug].js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-const post = ({ blog , post: post1  })=>{
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
-        className: "container px-5 mx-auto flex flex-col ",
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: "lg:w-4/6 mx-auto bg-white border-2 rounded-md",
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: ""
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "rounded-md overflow-hidden ",
-                    children: blog.attributes.image.data && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                        alt: "content",
-                        className: "object-center place-self-stretch border-b-2 ",
-                        src: "http://localhost:1337" + blog.attributes.image.data.attributes.url
-                    })
-                }),
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "flex flex-col mt-8",
-                    children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                            children: blog && blog.attributes.title
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                            className: "container p-4 rounded-md mb-2 w-full",
-                            dangerouslySetInnerHTML: {
-                                __html: post1
-                            }
-                        }),
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: " text-center lg:flex border-t-2 h-auto p-6 ",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: "lg:self-center items-center",
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: "w-20 h-20 rounded-full inline-flex lg:self-center items-center m-4 justify-center align-middle bg-gray-800 text-gray-600",
-                                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
-                                            fill: "none",
-                                            stroke: "currentColor",
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            strokeWidth: "2",
-                                            className: "w-10 h-10",
-                                            viewBox: "0 0 24 24",
-                                            children: [
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
-                                                    d: "M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"
-                                                }),
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("circle", {
-                                                    cx: "12",
-                                                    cy: "7",
-                                                    r: "4"
-                                                })
-                                            ]
-                                        })
-                                    })
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "flex flex-col self-center mx-4 px-2",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h4", {
-                                            className: "self-start",
-                                            children: blog.attributes.author.data.attributes.name
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                            className: "text-left",
-                                            children: blog.attributes.author.data.attributes.about
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ]
-        })
-    });
-};
-// export async function getServerSideProps(context) {
-//     if (!mongoose.connections[0].readyState)
-//     await mongoose.connect(process.env.MONGO_URI)
-//     // console.log(context)
-//     let blog = await Blogs.findOne({slug:context.query.slug});
-//     console.log(blog.author)
-//     let author = await Authors.findOne({name:blog.author})
-//     return {
-//       props: {blogs: JSON.parse(JSON.stringify(blog)) , authors: JSON.parse(JSON.stringify(author)) }, // will be passed to the page component as props
-//     }
-//   }
-// export default post
-async function getServerSideProps(context) {
-    let headers = {
-        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`
-    };
-    let a = await fetch(`${"http://localhost:1337"}/api/blogs?filters[slug][$eq]=${context.query.slug}` + `&populate=*`, {
-        headers: headers
-    });
-    let blog = await a.json();
-    let blogpost = blog.data[0].attributes.post;
-    return {
-        props: {
-            blog: blog.data[0],
-            post: blogpost
-        }
-    };
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (post);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst post = ({ blog , post: post1  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n        className: \"container px-5 mx-auto flex flex-col \",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"lg:w-4/6 mx-auto bg-white border-2 rounded-md\",\n            children: [\n                blog.attributes.image.data && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"rounded-md md:max-h-128 overflow-hidden \",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                        alt: \"content\",\n                        className: \"object-center h-60 md:h-128 w-full place-self-stretch border-b-2\",\n                        src: \"http://localhost:1337\" + blog.attributes.image.data.attributes.url\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                        lineNumber: 11,\n                        columnNumber: 17\n                    }, undefined)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                    lineNumber: 10,\n                    columnNumber: 44\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"flex flex-col mt-4 p-4\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                            children: blog && blog.attributes.title\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                            lineNumber: 14,\n                            columnNumber: 17\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"container p-4 rounded-md mb-2 w-full\",\n                            dangerouslySetInnerHTML: {\n                                __html: post1\n                            }\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                            lineNumber: 15,\n                            columnNumber: 17\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \" text-center lg:flex border-t-2 h-auto p-6 \",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"lg:self-center items-center\",\n                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"w-20 h-20 rounded-full inline-flex lg:self-center items-center m-4 justify-center align-middle bg-gray-800 text-gray-600\",\n                                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                                            fill: \"none\",\n                                            stroke: \"currentColor\",\n                                            strokeLinecap: \"round\",\n                                            strokeLinejoin: \"round\",\n                                            strokeWidth: \"2\",\n                                            className: \"w-10 h-10\",\n                                            viewBox: \"0 0 24 24\",\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                                                    d: \"M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                                    lineNumber: 21,\n                                                    columnNumber: 37\n                                                }, undefined),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"circle\", {\n                                                    cx: \"12\",\n                                                    cy: \"7\",\n                                                    r: \"4\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                                    lineNumber: 22,\n                                                    columnNumber: 37\n                                                }, undefined)\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                            lineNumber: 20,\n                                            columnNumber: 33\n                                        }, undefined)\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                        lineNumber: 19,\n                                        columnNumber: 29\n                                    }, undefined)\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                    lineNumber: 18,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"flex flex-col self-center mx-4 px-2\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h4\", {\n                                            className: \"self-start\",\n                                            children: blog.attributes.author.data.attributes.name\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                            lineNumber: 27,\n                                            columnNumber: 25\n                                        }, undefined),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                            className: \"text-left\",\n                                            children: blog.attributes.author.data.attributes.about\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                            lineNumber: 28,\n                                            columnNumber: 25\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                                    lineNumber: 26,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                            lineNumber: 17,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n                    lineNumber: 13,\n                    columnNumber: 17\n                }, undefined)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n            lineNumber: 9,\n            columnNumber: 13\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Jai Lakhmani\\\\Desktop\\\\codetrading\\\\codeblogs\\\\pages\\\\Blog\\\\[slug].js\",\n        lineNumber: 8,\n        columnNumber: 12\n    }, undefined);\n};\n// export async function getServerSideProps(context) {\n//     if (!mongoose.connections[0].readyState)\n//     await mongoose.connect(process.env.MONGO_URI)\n//     // console.log(context)\n//     let blog = await Blogs.findOne({slug:context.query.slug});\n//     console.log(blog.author)\n//     let author = await Authors.findOne({name:blog.author})\n//     return {\n//       props: {blogs: JSON.parse(JSON.stringify(blog)) , authors: JSON.parse(JSON.stringify(author)) }, // will be passed to the page component as props\n//     }\n//   }\n// export default post\nasync function getServerSideProps(context) {\n    let headers = {\n        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`\n    };\n    let a = await fetch(`${\"http://localhost:1337\"}/api/blogs?filters[slug][$eq]=${context.query.slug}` + `&populate=*`, {\n        headers: headers\n    });\n    let blog = await a.json();\n    let blogpost = blog.data[0].attributes.post;\n    return {\n        props: {\n            blog: blog.data[0],\n            post: blogpost\n        }\n    };\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (post);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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Q0FBQ0MsR0FBRyxDQUFDNkIsWUFBWSxDQUFDLENBQUM7S0FBRTtJQUNyRSxJQUFJQyxDQUFDLEdBQUcsTUFBTUMsS0FBSyxDQUFDLENBQUMsRUFBRWhDLHVCQUFrQyxDQUFDLDhCQUE4QixFQUFFMkIsT0FBTyxDQUFDTSxLQUFLLENBQUNDLElBQUksQ0FBQyxDQUFDLEdBQUUsQ0FBQyxXQUFXLENBQUMsRUFBRTtRQUFFTixPQUFPLEVBQUVBLE9BQU87S0FBRSxDQUFDO0lBQ3BKLElBQUl0QyxJQUFJLEdBQUcsTUFBTXlDLENBQUMsQ0FBQ0ksSUFBSSxFQUFFO0lBQ3pCLElBQUlDLFFBQVEsR0FBRzlDLElBQUksQ0FBQ00sSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDRixVQUFVLENBQUNMLElBQUk7SUFFM0MsT0FBTztRQUNIZ0QsS0FBSyxFQUFFO1lBQUUvQyxJQUFJLEVBQUVBLElBQUksQ0FBQ00sSUFBSSxDQUFDLENBQUMsQ0FBQztZQUFFUCxJQUFJLEVBQUUrQyxRQUFRO1NBQUU7S0FDaEQ7Q0FDSjtBQUNELGlFQUFlL0MsSUFBSSIsInNvdXJjZXMiOlsid2VicGFjazovL2NvZGVibG9ncy8uL3BhZ2VzL0Jsb2cvW3NsdWddLmpzPzc5MTYiXSwic291cmNlc0NvbnRlbnQiOlsiXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5cclxuY29uc3QgcG9zdCA9ICh7IGJsb2csIHBvc3QgfSkgPT4ge1xyXG5cclxuXHJcbiAgICByZXR1cm4gPHNlY3Rpb24gY2xhc3NOYW1lPVwiY29udGFpbmVyIHB4LTUgbXgtYXV0byBmbGV4IGZsZXgtY29sICBcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsZzp3LTQvNiBteC1hdXRvICBiZy13aGl0ZSBib3JkZXItMiByb3VuZGVkLW1kXCI+XHJcbiAgICAgICAgICAgIHtibG9nLmF0dHJpYnV0ZXMuaW1hZ2UuZGF0YSAmJiA8ZGl2IGNsYXNzTmFtZT1cInJvdW5kZWQtbWQgIG1kOm1heC1oLTEyOCBvdmVyZmxvdy1oaWRkZW4gXCI+XHJcbiAgICAgICAgICAgICAgICA8aW1nIGFsdD1cImNvbnRlbnRcIiBjbGFzc05hbWU9XCJvYmplY3QtY2VudGVyIGgtNjAgbWQ6aC0xMjggdy1mdWxsICBwbGFjZS1zZWxmLXN0cmV0Y2ggYm9yZGVyLWItMlwiIHNyYz17cHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfU1RSQVBJX1VSTCArIGJsb2cuYXR0cmlidXRlcy5pbWFnZS5kYXRhLmF0dHJpYnV0ZXMudXJsfSAvPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+fVxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIG10LTQgcC00XCI+XHJcbiAgICAgICAgICAgICAgICA8aDE+e2Jsb2cgJiYgYmxvZy5hdHRyaWJ1dGVzLnRpdGxlfTwvaDE+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBwLTQgIHJvdW5kZWQtbWQgbWItMiB3LWZ1bGxcIiBkYW5nZXJvdXNseVNldElubmVySFRNTD17e19faHRtbDpwb3N0fX0+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIiB0ZXh0LWNlbnRlciBsZzpmbGV4ICBib3JkZXItdC0yICBoLWF1dG8gcC02IFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOnNlbGYtY2VudGVyIGl0ZW1zLWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTIwIGgtMjAgcm91bmRlZC1mdWxsIGlubGluZS1mbGV4IGxnOnNlbGYtY2VudGVyIGl0ZW1zLWNlbnRlciBtLTQganVzdGlmeS1jZW50ZXIgYWxpZ24tbWlkZGxlIGJnLWdyYXktODAwIHRleHQtZ3JheS02MDBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3ZnIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiIHN0cm9rZVdpZHRoPVwiMlwiIGNsYXNzTmFtZT1cInctMTAgaC0xMFwiIHZpZXdCb3g9XCIwIDAgMjQgMjRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD1cIk0yMCAyMXYtMmE0IDQgMCAwMC00LTRIOGE0IDQgMCAwMC00IDR2MlwiPjwvcGF0aD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjEyXCIgY3k9XCI3XCIgcj1cIjRcIj48L2NpcmNsZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIHNlbGYtY2VudGVyICBteC00IHB4LTJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInNlbGYtc3RhcnRcIj57YmxvZy5hdHRyaWJ1dGVzLmF1dGhvci5kYXRhLmF0dHJpYnV0ZXMubmFtZX08L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWxlZnRcIj57YmxvZy5hdHRyaWJ1dGVzLmF1dGhvci5kYXRhLmF0dHJpYnV0ZXMuYWJvdXR9PC9wPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgIDwvc2VjdGlvbj5cclxuXHJcbn1cclxuLy8gZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcyhjb250ZXh0KSB7XHJcbi8vICAgICBpZiAoIW1vbmdvb3NlLmNvbm5lY3Rpb25zWzBdLnJlYWR5U3RhdGUpXHJcbi8vICAgICBhd2FpdCBtb25nb29zZS5jb25uZWN0KHByb2Nlc3MuZW52Lk1PTkdPX1VSSSlcclxuLy8gICAgIC8vIGNvbnNvbGUubG9nKGNvbnRleHQpXHJcbi8vICAgICBsZXQgYmxvZyA9IGF3YWl0IEJsb2dzLmZpbmRPbmUoe3NsdWc6Y29udGV4dC5xdWVyeS5zbHVnfSk7XHJcbi8vICAgICBjb25zb2xlLmxvZyhibG9nLmF1dGhvcilcclxuLy8gICAgIGxldCBhdXRob3IgPSBhd2FpdCBBdXRob3JzLmZpbmRPbmUoe25hbWU6YmxvZy5hdXRob3J9KVxyXG4vLyAgICAgcmV0dXJuIHtcclxuLy8gICAgICAgcHJvcHM6IHtibG9nczogSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShibG9nKSkgLCBhdXRob3JzOiBKU09OLnBhcnNlKEpTT04uc3RyaW5naWZ5KGF1dGhvcikpIH0sIC8vIHdpbGwgYmUgcGFzc2VkIHRvIHRoZSBwYWdlIGNvbXBvbmVudCBhcyBwcm9wc1xyXG4vLyAgICAgfVxyXG4vLyAgIH1cclxuLy8gZXhwb3J0IGRlZmF1bHQgcG9zdFxyXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0U2VydmVyU2lkZVByb3BzKGNvbnRleHQpIHtcclxuICAgIGxldCBoZWFkZXJzID0geyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7cHJvY2Vzcy5lbnYuU1RSQVBJX1RPS0VOfWAgfVxyXG4gICAgbGV0IGEgPSBhd2FpdCBmZXRjaChgJHtwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TVFJBUElfVVJMfS9hcGkvYmxvZ3M/ZmlsdGVyc1tzbHVnXVskZXFdPSR7Y29udGV4dC5xdWVyeS5zbHVnfWAgK2AmcG9wdWxhdGU9KmAsIHsgaGVhZGVyczogaGVhZGVycyB9KVxyXG4gICAgbGV0IGJsb2cgPSBhd2FpdCBhLmpzb24oKTtcclxuICAgIGxldCBibG9ncG9zdCA9IGJsb2cuZGF0YVswXS5hdHRyaWJ1dGVzLnBvc3Q7XHJcblxyXG4gICAgcmV0dXJuIHtcclxuICAgICAgICBwcm9wczogeyBibG9nOiBibG9nLmRhdGFbMF0sIHBvc3Q6IGJsb2dwb3N0IH0sIC8vIHdpbGwgYmUgcGFzc2VkIHRvIHRoZSBwYWdlIGNvbXBvbmVudCBhcyBwcm9wc1xyXG4gICAgfVxyXG59XHJcbmV4cG9ydCBkZWZhdWx0IHBvc3RcclxuIl0sIm5hbWVzIjpbIlJlYWN0IiwicG9zdCIsImJsb2ciLCJzZWN0aW9uIiwiY2xhc3NOYW1lIiwiZGl2IiwiYXR0cmlidXRlcyIsImltYWdlIiwiZGF0YSIsImltZyIsImFsdCIsInNyYyIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19TVFJBUElfVVJMIiwidXJsIiwiaDEiLCJ0aXRsZSIsImRhbmdlcm91c2x5U2V0SW5uZXJIVE1MIiwiX19odG1sIiwic3ZnIiwiZmlsbCIsInN0cm9rZSIsInN0cm9rZUxpbmVjYXAiLCJzdHJva2VMaW5lam9pbiIsInN0cm9rZVdpZHRoIiwidmlld0JveCIsInBhdGgiLCJkIiwiY2lyY2xlIiwiY3giLCJjeSIsInIiLCJoNCIsImF1dGhvciIsIm5hbWUiLCJwIiwiYWJvdXQiLCJnZXRTZXJ2ZXJTaWRlUHJvcHMiLCJjb250ZXh0IiwiaGVhZGVycyIsIkF1dGhvcml6YXRpb24iLCJTVFJBUElfVE9LRU4iLCJhIiwiZmV0Y2giLCJxdWVyeSIsInNsdWciLCJqc29uIiwiYmxvZ3Bvc3QiLCJwcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/Blog/[slug].js\n");
 
 /***/ }),
 
-/***/ 6689:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ })
 
@@ -151,7 +50,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(5988));
+var __webpack_exports__ = (__webpack_exec__("./pages/Blog/[slug].js"));
 module.exports = __webpack_exports__;
 
 })();
