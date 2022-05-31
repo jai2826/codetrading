@@ -10,8 +10,7 @@ module.exports = ({ env }) => ({
         secret: process.env.DO_SPACE_SECRET_KEY,
         endpoint: process.env.DO_SPACE_ENDPOINT,
         space: process.env.DO_SPACE_BUCKET,
-        directory: process.env.DO_SPACE_DIRECTORY,
-        cdn: process.env.DO_SPACE_CDN,
+        directory: process.env.DO_SPACE_DIRECTORY
       },
     },
   },
