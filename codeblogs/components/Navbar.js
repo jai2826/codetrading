@@ -16,6 +16,7 @@ const Navbar = () => {
           <Link  href={'/Techhub'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Tech Hub</li></a></Link>
           <Link  href={'/Launchpad'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Launch Pad</li></a></Link>
           <Link  href={'/Guides'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Guides</li></a></Link>
+          <Link  href={'/Finance'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Finance</li></a></Link>
           <Link  href={'/Aboutus'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>About Us</li></a></Link>
           {/* <Link  href={'/Services'}><a className='p-1 md:px-2 rounded-lg  text-xs m-0 md:text-xl md:mx-2 font-semibold hover:bg-purple-500'><li>Services</li></a></Link> */}
         </ul>

@@ -49,7 +49,7 @@ const Launchpad = ({ blogs }) => {
           {newblogs && newblogs.slice(0, visible).map(item => {
             return (<div key={item.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg  lg:w-1/5 md:w-3/12  p-2 m-3 w-full">
               <div className='h-56 overflow-hidden ' >
-                {item.attributes.image.data && <img className="object-fill object-center h-full rounded-md" src={process.env.NEXT_PUBLIC_STRAPI_URL + item.attributes.image.data.attributes.url} width={1200} height={1000} alt="" />}
+                {item.attributes.image.data && <img className="object-fill object-center h-full rounded-md" src={item.attributes.image.data.attributes.url} width={1200} height={1000} alt="" />}
               </div>
               <Link href={`/Blog/${item.attributes.slug}`} className="flex flex-col justify-between p-10  bg-white">
                 <div className="flex-1">
