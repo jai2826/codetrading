@@ -7,8 +7,8 @@ const Services = () => {
       <h1 className='font-semibold text-xl m-4'>We offer the following Service!!</h1>
       <div className='border-gray-200 border-8 rounded-2xl' >
         <span className='flex justify-between m-3 items-center '>
-          <h3 className='font-semibold text-lg text-purple-500'>Advertisements</h3>
-          <a className='max-w-fit py-1 px-3 rounded-md bg-gray-500 hover:bg-purple-500' href='/Services/Advertisements'>Know More</a>
+          <h3 className='font-semibold text-lg text-purple-700'>Advertisements</h3>
+          <a className='max-w-fit py-1 px-3 rounded-md bg-gray-500 hover:bg-purple-700' href='/Services/Advertisements'>Know More</a>
         </span>
         <div className=' flex flex-col my-3 mx-4 items-center'>
         <h3 className='self-start font-semibold '>Why Advertise with us?</h3>
@@ -18,8 +18,8 @@ const Services = () => {
       </div>
       <div className='border-gray-200 border-8 rounded-2xl' >
         <span className='flex justify-between m-3 items-center '>
-          <h3 className='font-semibold text-lg text-purple-500'>Wanna build your website</h3>
-          <a className='max-w-fit py-1 px-3 rounded-md bg-gray-500 hover:bg-purple-500' href='/Services/Websitebuild'>Know More</a>
+          <h3 className='font-semibold text-lg text-purple-700'>Wanna build your website</h3>
+          <a className='max-w-fit py-1 px-3 rounded-md bg-gray-500 hover:bg-purple-700' href='/Services/Websitebuild'>Know More</a>
         </span>
         <div className=' flex flex-col my-3 mx-4 items-center'>
         <h3 className='self-start font-semibold'>You have come to the right Place!!</h3>

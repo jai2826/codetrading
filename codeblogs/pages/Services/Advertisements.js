@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 
 
-const Advertisements = ({ plans, validity, checkcategory }) => {
+const Advertisements = ({ plans}) => {
   let newplans = []
   console.log(newplans.length)
   plans.data.map(item => {
@@ -27,11 +27,11 @@ const Advertisements = ({ plans, validity, checkcategory }) => {
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Get Amazing discounts on yearly plans</p>
           <div className="flex mx-auto border-2 border-black rounded overflow-hidden mt-6">
-            <button onClick={() => { validity(1) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-500">Monthly</button>
+            <button onClick={() => { validity(1) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-700">Monthly</button>
             <div className="border border-black"></div>
-            <button onClick={() => { validity(6) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-500">Semi-annually</button>
+            <button onClick={() => { validity(6) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-700">Semi-annually</button>
             <div className="border border-black"></div>
-            <button onClick={() => { validity(12) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-500">Annually</button>
+            <button onClick={() => { validity(12) }} className="validity py-1 px-4 focus:outline-none active:bg-purple-700">Annually</button>
 
           </div>
         </div>

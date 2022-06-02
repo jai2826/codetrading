@@ -29,18 +29,18 @@
       "type": "text",
       "required": false
     },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "author"
-    },
     "dp": {
       "allowedTypes": [
         "images"
       ],
       "type": "media",
       "multiple": false
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "Author"
     }
   }
 }

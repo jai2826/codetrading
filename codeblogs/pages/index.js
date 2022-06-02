@@ -1,72 +1,107 @@
-import Head from 'next/head'
+import React from 'react'
 import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
+import Head from 'next/head'
+import Link from 'next/link'
+import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import { TiUser } from 'react-icons/ti'
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function Home() {
-  return (
-    <div >
-      {/* <Head>
-        <title>codeblogs</title>
-        <meta name="description" content="codeblogs.com" />
-        <link rel="icon" href="/logo.ico" />
-      </Head> */}
-      <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-        </svg>
-      </div>
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-        <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-        <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
-        <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-        <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-          <circle cx="6" cy="6" r="3"></circle>
-          <circle cx="6" cy="18" r="3"></circle>
-          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-        </svg>
-      </div>
-    </div>
-    <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      </div>
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
-        <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-        <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <button className="flex mx-auto mt-20 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
-  </div>
-</section>
 
-    </div>
+
+const page = ({ blogs }) => {
+
+
+  const [visible, setvisible] = useState(20)
+  const readmore = () => {
+    setvisible(prevState => (prevState + 20))
+    if (visible >= blogs.length)
+      toast.info('No more Blogs of this category', {
+        position: "bottom-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+  }
+  return (<>
+    <Head >
+
+      <title>Geekcell - One stop for geeks</title>
+      <meta name="description" content="Everything to know TechHub is Here!!" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
+      <meta name="language" content="English" />
+      <link rel="icon" href="/logo.ico" type="image/x-icon" />
+    </Head>
+    <section >
+      <div className="2xl:container mx-auto px-6 lg:py-10 lg:px-8 border-2 my-6 border-gray-100">
+        <div className=" flex flex-wrap mb-20 md:flex-col">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className="font-medium mb-2">Everything to know about tech is here!!!</h1>
+          </div>
+          <p className=" w-full leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit maiores ab iste, esse, perspiciatis dicta, libero unde ad fugit labore sequi nesciunt deserunt. Dolor, consectetur libero. Odio quo dolorum laboriosam quos ullam nesciunt, possimus corporis molestias eos, deleniti itaque dignissimos sint odit soluta omnis velit incidunt unde voluptatibus! Aspernatur?</p>
+        </div>
+        <div className=" mx-auto  ">
+          <div className="flex flex-wrap place-content-center ">
+            {blogs && blogs.slice(0, visible).map(item => {
+              return (<Link key={item.id} href={`/Blog/${item.attributes.slug}`} >
+                <div className="bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg md:w-w22   p-2 m-3 w-full cursor-pointer">
+                  <div className='h-56 overflow-hidden' >
+                    {item.attributes.image.data && <img className="object-fill object-center h-full rounded-lg" src={item.attributes.image.data.attributes.url} width={1200} height={1000} alt="" />}
+                  </div>
+                  <div className="flex flex-col justify-between p-2 bg-white">
+                    <p className="text-xl font-semibold ">{item.attributes.title}</p>
+                    <p className="text-base ">{item.attributes.desc}</p>
+                  </div>
+                  {item.attributes.author && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
+                     <div className='flex items-center space-x-1 pt-2' ><TiUser /> <p>{item.attributes.author.data.attributes.name}</p></div>
+                  </div>}
+                </div></Link>)
+            })}
+          </div>
+          <div className='container flex justify-center m-4 '><button onClick={() => readmore()} className="m-2 px-2 py-1 self-center border-2 border-black rounded-md hover:bg-purple-700 hover:text-white">Readmore</button>
+            <ToastContainer
+              position="bottom-center"
+              autoClose={4000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
+          </div>
+        </div>
+      </div>
+    </section></>
   )
 }
+
+
+
+
+
+
+
+
+export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
+  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Basic&populate=*`, { headers: headers })
+  let blogs = await a.json();
+  let newblogs = blogs.data;
+  newblogs.sort((a, b) => {
+    return b.id - a.id;
+  });
+  return {
+    props: { blogs: newblogs },
+  }
+}
+export default page

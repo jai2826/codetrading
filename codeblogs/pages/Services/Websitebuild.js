@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 
 
 
+// const Websitebuild = ({ plans, validity, checkcategory }) => {
 
-const Websitebuild = ({ plans, validity, checkcategory }) => {
+const Websitebuild = ({ plans }) => {
   let newplans = [];
 
   plans.data.map(item => {
@@ -29,13 +30,13 @@ const Websitebuild = ({ plans, validity, checkcategory }) => {
           <div className="flex h-20 items-center mx-auto space-x-20 content-center ">
           <h5 >Add a maintenance plan</h5>
           <div className="flex mx-auto border-2 border-black rounded overflow-hidden ">
-            <button onClick={() => { validity(1) }} className="validity py-1 px-4  active:bg-purple-500">Monthly</button>
+            <button onClick={() => { validity(1) }} className="validity py-1 px-4  active:bg-purple-700">Monthly</button>
             <div className="border border-black"></div>
-            <button onClick={() => { validity(6) }} className="validity py-1 px-4  active:bg-purple-500">Semi-annually</button>
+            <button onClick={() => { validity(6) }} className="validity py-1 px-4  active:bg-purple-700">Semi-annually</button>
             <div className="border border-black"></div>
-            <button onClick={() => { validity(12) }} className="validity py-1 px-4  active:bg-purple-500">Annually</button>
+            <button onClick={() => { validity(12) }} className="validity py-1 px-4  active:bg-purple-700">Annually</button>
             <div className="border border-black"></div>
-            <button onClick={() => { validity(0) }} className="validity py-1 px-4  active:bg-purple-500">No need</button>
+            <button onClick={() => { validity(0) }} className="validity py-1 px-4  active:bg-purple-700">No need</button>
           </div>
           </div>
         </div>

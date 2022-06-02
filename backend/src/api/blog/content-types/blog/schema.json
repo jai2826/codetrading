@@ -25,7 +25,7 @@
       "required": true,
       "targetField": "title"
     },
-    "author": {
+    "Author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::author.author",
