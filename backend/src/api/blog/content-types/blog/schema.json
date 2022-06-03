@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -44,7 +44,10 @@
       "inversedBy": "blogs"
     },
     "desc": {
-      "type": "text"
+      "type": "text",
+      "required": true,
+      "maxLength": 160,
+      "minLength": 100
     },
     "seo": {
       "type": "component",

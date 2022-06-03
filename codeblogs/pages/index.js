@@ -40,7 +40,7 @@ const page = ({ blogs }) => {
       <div className="2xl:container mx-auto px-6 lg:py-10 lg:px-8 border-2 my-6 border-gray-100">
         <div className=" flex flex-wrap mb-20 md:flex-col">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="font-medium mb-2">Everything to know about tech is here!!!</h1>
+            <h1 className=" font-medium mb-2">Everything to know about tech is here!!!</h1>
           </div>
           <p className=" w-full leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit maiores ab iste, esse, perspiciatis dicta, libero unde ad fugit labore sequi nesciunt deserunt. Dolor, consectetur libero. Odio quo dolorum laboriosam quos ullam nesciunt, possimus corporis molestias eos, deleniti itaque dignissimos sint odit soluta omnis velit incidunt unde voluptatibus! Aspernatur?</p>
         </div>
@@ -54,9 +54,9 @@ const page = ({ blogs }) => {
                   </div>
                   <div className="flex flex-col justify-between p-2 bg-white">
                     <p className="text-xl font-semibold ">{item.attributes.title}</p>
-                    <p className="text-base ">{item.attributes.desc}</p>
+                    <p className="text-base ">{item.attributes.desc.slice(0,160)}</p>
                   </div>
-                  {item.attributes.author && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
+                  {item.attributes.author.data && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
                      <div className='flex items-center space-x-1 pt-2' ><TiUser /> <p>{item.attributes.author.data.attributes.name}</p></div>
                   </div>}
                 </div></Link>)

@@ -20,35 +20,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/Blog/[slug]": [
+    "/Aboutus": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Blog/[slug].js"
-    ],
-    "/Finance": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Finance.js"
+      "static/chunks/pages/Aboutus.js"
     ],
     "/Guides": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Guides.js"
     ],
-    "/Launchpad": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Launchpad.js"
-    ],
     "/Programming": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Programming.js"
-    ],
-    "/Techhub": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Techhub.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

@@ -54,9 +54,9 @@ const page = ({ blogs }) => {
                   </div>
                   <div className="flex flex-col justify-between p-2 bg-white">
                     <p className="text-xl font-semibold ">{item.attributes.title}</p>
-                    <p className="text-base ">{item.attributes.desc}</p>
+                    <p className="text-base ">{item.attributes.desc.slice(0, 160)}</p>
                   </div>
-                  {item.attributes.author && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
+                  {item.attributes.author.data && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
                     <div className='flex items-center space-x-1 pt-2' ><TiUser /> <p>{item.attributes.author.data.attributes.name}</p></div>
                   </div>}
                 </div></Link>)

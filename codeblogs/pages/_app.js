@@ -33,11 +33,21 @@ function MyApp({ Component, pageProps }) {
 //   }
 {/* <Component  key={reloadKey} validity={validity} checkcategory={category} {...pageProps} /> */}
 
+
+  // let myref = useRef();
+  // const [hamactive, setHamactive] = useState(false)
+  // useEffect(() => {
+  //   document.addEventListener('mousedown', (event) => {
+  //     if(!myref.current.contains(event.target))
+  //     setHamactive(false)
+  //   })
+
+  // }, [])
   return <>
   <Head/>
-  <Navbar/>
-  <Component   {...pageProps} />
-  <Footer/>
+  <Navbar />
+    <Component   {...pageProps} />
+    <Footer />
   </>
 }
 

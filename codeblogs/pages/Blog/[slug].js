@@ -5,7 +5,9 @@ import React from 'react';
 const post = ({ blog, post }) => {
 
 
-    return <section className="container  mx-auto flex flex-col  ">
+    return(<> 
+        
+        <section className="container  mx-auto flex flex-col  ">
         <div className="lg:w-4/6 mx-auto mt-6  bg-white   rounded-md ">
             {blog.attributes.image.data && <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
                 <img alt={blog.attributes.image.data.attributes.alternativeText} className="object-center h-60 md:h-128 w-full  place-self-stretch " src={blog.attributes.image.data.attributes.url} />
@@ -23,14 +25,14 @@ const post = ({ blog, post }) => {
                                 </svg>
                             </div>
                         </div>
-                        <div className="flex flex-col self-center mx-4 px-2">
+                        {blog.attributes.author.data && <div className="flex flex-col self-center mx-4 px-2">
                         <h4 className="self-start">{blog.attributes.author.data.attributes.name}</h4>
                         <p className="text-left">{blog.attributes.author.data.attributes.about}</p>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div>
-    </section>
+    </section></>)
 
 }
 
