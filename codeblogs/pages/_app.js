@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
+import Script from 'next/script'
 import '../styles/globals.css'
 import { useState } from 'react'
 
@@ -34,18 +35,10 @@ function MyApp({ Component, pageProps }) {
 {/* <Component  key={reloadKey} validity={validity} checkcategory={category} {...pageProps} /> */}
 
 
-  // let myref = useRef();
-  // const [hamactive, setHamactive] = useState(false)
-  // useEffect(() => {
-  //   document.addEventListener('mousedown', (event) => {
-  //     if(!myref.current.contains(event.target))
-  //     setHamactive(false)
-  //   })
 
-  // }, [])
   return <>
-  <Head/>
-  <Navbar />
+    <Head/>
+    <Navbar />
     <Component   {...pageProps} />
     <Footer />
   </>

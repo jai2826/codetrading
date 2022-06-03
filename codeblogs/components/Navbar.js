@@ -22,7 +22,9 @@ const Navbar = () => {
   
 
   return (
-    <div ref={myref} className='w-full h-18 lg:h-22 flex flex-col sticky lg:flex-row p-2 top-0 bg-white items-center shadow-md z-99 md:text-lg  '>
+    <>
+      
+      <div ref={myref} className='w-full h-18 lg:h-22 flex flex-col sticky lg:flex-row p-2 top-0 bg-white items-center shadow-md z-99 md:text-lg  '>
       <div className="flex w-full lg:w-1/4 justify-between ">
         <div className='flex items-center '>
           <img className="rounded-lg h-14 w-16  lg:h-18 lg:w-20 r" src="/logo.png" alt="Geekcell.in" />
@@ -61,17 +63,18 @@ const Navbar = () => {
       
       }`}</style>
       <ul className={hamactive ? "mynavulphone " : "mynavulinactive lg:mynavul " }>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/'}><a>Home</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Programming'}><a>Programming</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Techhub'}><a>Tech Hub</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Launchpad'}><a>Launch Pad</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Guides'}><a>Guides</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Finance'}><a>Finance</a></Link></li>
-        <li onClick={()=>setHamactive(!hamactive)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Aboutus'}><a>About Us</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/'}><a>Home</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Programming'}><a>Programming</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Techhub'}><a>Tech Hub</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Launchpad'}><a>Launch Pad</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Guides'}><a>Guides</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Finance'}><a>Finance</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Aboutus'}><a>About Us</a></Link></li>
       </ul>
       {/* <Link href={'/Register'}><div className=" bg-purple-700 absolute right-4 m-2 h-8 w-20 bg rounded-md text-center py-1 font-semibold cursor-pointer">Login</div></Link> */}
 
-    </div>
+    </div></>
+
   )
 }
 
