@@ -37,7 +37,7 @@ const page = ({ blogs }) => {
       <link rel="icon" href="/logo.ico" type="image/x-icon" />
     </Head>
     <section >
-      <div className="2xl:container mx-auto px-6 lg:py-10 lg:px-8 border-2 my-6 border-gray-100">
+      <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100">
         <div className=" flex flex-wrap mb-20 md:flex-col">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className=" font-medium mb-2">Everything to know about tech is here!!!</h1>
@@ -48,7 +48,7 @@ const page = ({ blogs }) => {
           <div className="flex flex-wrap place-content-center ">
             {blogs && blogs.slice(0, visible).map(item => {
               return (<Link key={item.id} href={`/Blog/${item.attributes.slug}`} >
-                <div className="bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg md:w-w22   p-2 m-3 w-full cursor-pointer">
+                <div className="bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg w-full sm:w-1/3 md:w-1/4 xl:w-w22  p-2 m-3  cursor-pointer">
                   <div className='h-56 overflow-hidden' >
                     {item.attributes.image.data && <img className="object-fill object-center h-full rounded-lg" src={item.attributes.image.data.attributes.url} width={1200} height={1000} alt="" />}
                   </div>

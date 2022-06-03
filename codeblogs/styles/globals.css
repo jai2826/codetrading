@@ -30,7 +30,7 @@
 /* CSS for hamburger and navbar in mobile funtioning */ 
  @layer components{
     .mynavul{
-       @apply  flex items-center w-full  justify-end px-4 translate-x-0 ;
+       @apply top-0 static flex h-18 items-center w-full  justify-end px-4 translate-x-0 ;
     }
     .mynavulphone{
         @apply border-2 border-gray-100 rounded-md fixed top-18 w-full justify-start py-1 px-2 h-screen bg-white ease-in-out duration-500 translate-x-1/2;
