@@ -13,14 +13,7 @@ const Header = () => {
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-NJSCBKF');`,
             }}></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWD26CNE2R"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments)}
-                gtag('js', new Date());
-
-                gtag('config', 'G-WWD26CNE2R');
-            </script>
+            
 
         </Head>
     )
