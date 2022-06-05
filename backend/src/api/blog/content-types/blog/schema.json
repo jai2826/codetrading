@@ -46,8 +46,7 @@
     "desc": {
       "type": "text",
       "required": true,
-      "maxLength": 160,
-      "minLength": 100
+      "minLength": 120
     },
     "seo": {
       "type": "component",

@@ -1,71 +1,33 @@
 import React from 'react'
-
+import Head from 'next/head'
 const Aboutus = () => {
-  return (
-    <section>
-      <div className="container flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-          <div className="w-full mx-auto">
-            <h1>A small headline to switch your visitors into users.</h1>
-            <h2>A small headline to switch your visitors into users.</h2>
-            <p>Right. Say that again. No, no, George, look, it&apos;s just an act, right? Okay, so 9:00 you&apos;re strolling through the parking lot, you see us struggling.</p>
+  return (<>
+    <Head >
+      <title>About us</title>
+      <meta name="description" content="Get know geekcell.in insights!" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
+      <meta name="language" content="English" />
+      <link rel="icon" href="/logo.ico" type="image/x-icon" />
+    </Head>
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+            <br class="hidden lg:inline-block"/>readymade gluten
+          </h1>
+          <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+          <div class="flex justify-center">
+            <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+            <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
           </div>
         </div>
-        <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
-          <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-neutral-600 rounded-full bg-gray-50 sm:mr-10">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="w-10 h-10" viewBox="0 0 24 24">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <circle cx="12" cy="12" r="9"></circle>
-              <line x1="3.6" y1="15" x2="14.15" y2="15"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(72 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(144 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(216 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(288 12 12)"></line>
-            </svg>
-          </div>
-          <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
-            <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
-          <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-neutral-600 rounded-full bg-gray-50 sm:mr-10">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="w-10 h-10" viewBox="0 0 24 24">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <circle cx="12" cy="12" r="9"></circle>
-              <line x1="3.6" y1="15" x2="14.15" y2="15"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(72 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(144 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(216 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(288 12 12)"></line>
-            </svg>
-          </div>
-          <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
-            <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center pb-10 mx-auto my-10 border-b border-gray-200 max-w-7xl sm:flex-row">
-          <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-neutral-600 rounded-full bg-gray-50 sm:mr-10">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="w-10 h-10" viewBox="0 0 24 24">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <circle cx="12" cy="12" r="9"></circle>
-              <line x1="3.6" y1="15" x2="14.15" y2="15"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(72 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(144 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(216 12 12)"></line>
-              <line x1="3.6" y1="15" x2="14.15" y2="15" transform="rotate(288 12 12)"></line>
-            </svg>
-          </div>
-          <div className="flex-grow mt-6 prose text-center sm:text-left sm:mt-0 prose-md">
-            <h2>Short length headline.</h2>
-            <p>Free and Premium themes, UI Kit&apos;s, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
-          </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
         </div>
       </div>
-    </section>
-   
-  )
+      </section>
+    </>)
 }
 
 export default Aboutus  

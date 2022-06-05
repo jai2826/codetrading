@@ -1,12 +1,21 @@
 
 import React from 'react';
-
+import Head from 'next/head';
 
 const post = ({ blog, post }) => {
 
 
     return(<> 
-        
+        <Head>
+            {blog.attributes.seo && <> {blog.attributes.seo && <title>{blog.attributes.seo.metaTitle} </title>}
+            {blog.attributes.seo.metaDescription &&<meta name="description" content={blog.attributes.seo.metaDescription}/>}
+            {blog.attributes.seo.keywords && <meta name="keywords" content={blog.attributes.seo.keywords} />}
+            {blog.attributes.seo.metaRobots && <meta name="robots" content={blog.attributes.seo.metaRobots} />}
+            {blog.attributes.seo.canonicalURL && <meta name="keywords" content={blog.attributes.seo.canonicalURL} />} </> }
+            <meta name="language" content="English" /> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        
+        </Head>
         <section className="container  mx-auto flex flex-col  ">
         <div className="lg:w-4/6 mx-auto mt-6  bg-white   rounded-md ">
             {blog.attributes.image.data && <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">

@@ -1,4 +1,5 @@
 module.exports = {
+    ckeditor: true,
     upload: {
         config: {
             provider: "strapi-provider-upload-dos",

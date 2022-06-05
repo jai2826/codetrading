@@ -36,40 +36,14 @@ const Navbar = () => {
           <div className="w-6 h-0.5 bg-purple-700"></div>
         </div></button>
       </div>
-      <style jsx>{` 
-      {/* .mynavulphone {
-          border:2px solid rgb(243, 244, 246);
-          border-radius:6px;
-          position:absolute;
-          top:72px;
-          display:flex;
-          flex-direction:column;
-          width:100%;
-          justify-content: start;
-          padding:1rem 2rem;
-          height: 100vh;
-          background-color: white;
-          transition:ease-in-out 0.5s;
-          transform: translateX(50%);
-          place-items:start;
-      } */}
-      {/* .mynavul{
-        display:flex;
-        align-items:center;
-        width:100%;
-        justify-content: end;
-        padding:0 2rem;
-      }, */}
-      
-      }`}</style>
       <ul className={hamactive ? "mynavulphone " : "mynavulinactive lg:mynavul " }>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/'}><a>Home</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Programming'}><a>Programming</a></Link></li>
-        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Techhub'}><a>Tech Hub</a></Link></li>
+        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Technews'}><a>Tech News</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Launchpad'}><a>Launch Pad</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Guides'}><a>Guides</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Finance'}><a>Finance</a></Link></li>
-        <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Aboutus'}><a>About Us</a></Link></li>
+        {/* <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700  hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lx:text-lg  xl:mx-2  2xl:text-xl'} ><Link  href={'/Aboutus'}><a>About Us</a></Link></li> */}
       </ul>
       {/* <Link href={'/Register'}><div className=" bg-purple-700 absolute right-4 m-2 h-8 w-20 bg rounded-md text-center py-1 font-semibold cursor-pointer">Login</div></Link> */}
 

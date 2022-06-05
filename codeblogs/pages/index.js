@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const page = ({ blogs }) => {
-
+  
 
   const [visible, setvisible] = useState(20)
   const readmore = () => {
@@ -26,11 +26,12 @@ const page = ({ blogs }) => {
         progress: undefined,
       });
   }
+
   return (<>
     <Head >
 
       <title>Geekcell - One stop for geeks</title>
-      <meta name="description" content="Everything to know TechHub is Here!!" />
+      <meta name="description" content="Everything about geeks is here" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
       <meta name="language" content="English" />
@@ -54,9 +55,9 @@ const page = ({ blogs }) => {
                   </div>
                   <div className="flex flex-col justify-between p-2 bg-white">
                     <p className="text-xl font-semibold ">{item.attributes.title}</p>
-                    <p className="text-base ">{item.attributes.desc.slice(0,160)}</p>
+                    <p className="text-base ">{item.attributes.desc.slice(0,80)}</p>
                   </div>
-                  {item.attributes.author.data && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full">
+                  {item.attributes.author.data && <div className="flex items-center m-2 border-t-2 border-gray-100 w-full mt-auto ">
                      <div className='flex items-center space-x-1 pt-2' ><TiUser /> <p>{item.attributes.author.data.attributes.name}</p></div>
                   </div>}
                 </div></Link>)
@@ -94,12 +95,10 @@ export async function getServerSideProps(context) {
     'public, s-maxage=10, stale-while-revalidate=59'
   )
   let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
-  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Basic&populate=*`, { headers: headers })
+  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Basic&sort=updatedAt%3Adesc&populate=*`, { headers: headers })
   let blogs = await a.json();
   let newblogs = blogs.data;
-  newblogs.sort((a, b) => {
-    return b.id - a.id;
-  });
+  
   return {
     props: { blogs: newblogs },
   }
