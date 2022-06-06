@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className=''>
       <div className=" py-2 px-4 border-gray-100 border-2 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex font-medium items-center  justify-center text-gray-900">
-          <Image className="rounded-lg " src="/logo.png" alt="Geekcell.in "  width="68" height="60" />
+          <Image className="rounded-lg " src="/mylogo.png" alt="Geekcell.in "  width="68" height="60" />
           <span className="ml-3 text-xl">Geekcell</span>
         </a>
         <p className="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2022 Geekcell </p>

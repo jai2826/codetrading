@@ -35,7 +35,7 @@ const page = ({ blogs }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
       <meta name="language" content="English" />
-      <link rel="icon" href="/logo.ico" type="image/x-icon" />
+      <link rel="icon" href="/mylogo.png" type="image/x-icon" />
     </Head>
     <section >
       <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100">

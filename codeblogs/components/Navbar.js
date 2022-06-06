@@ -27,7 +27,7 @@ const Navbar = () => {
       <div ref={myref} className='w-full h-18 lg:h-22 flex flex-col sticky lg:flex-row p-2 top-0 bg-white items-center shadow-md z-99 md:text-lg  '>
       <div className="flex w-full lg:w-1/4 justify-between ">
         <div className='flex items-center '>
-          <img className="rounded-lg h-14 w-16  lg:h-18 lg:w-20 r" src="/logo.png" alt="Geekcell.in" />
+          <img className="rounded-lg h-14 w-16  lg:h-18 lg:w-20 r" src="/mylogo.png" alt="Geekcell.in" />
           <p className='m-2 font-medium text-purple-700'><Link href={'/'}>Geekcell.in</Link></p>
         </div>
         <button  className='h-9 my-auto ' onClick={() => setHamactive(!hamactive)}><div className="space-y-1 p-2 self-center rounded-md lg:hidden border-2 border-purple-700">
