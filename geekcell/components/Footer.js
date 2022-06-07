@@ -15,10 +15,10 @@ const Footer = () => {
         </a>
         <p className="text-sm  sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2022 Geekcell </p>
         <span className="flex inline-center sm:ml-auto justify-center sm:justify-start ">
-          <a href='/' className='mx-0.5'><TiSocialFacebook size={25}/></a>
-          <a href='/' className='mx-0.5'><MdOutlineMail size={25}/></a>
-          <a href='/' className='mx-0.5'><TiSocialTwitter size={25}/></a>
-          <a href='/' className='mx-0.5'><IoLogoInstagram size={25}/></a>
+          <a title='facebook' href='/' className='mx-0.5'><TiSocialFacebook size={25}/> </a>
+          <a title='email' href='/' className='mx-0.5'><MdOutlineMail size={25}/> </a>
+          <a title='twitter' href='/' className='mx-0.5'><TiSocialTwitter size={25}/> </a>
+          <a title='instagram' href='/' className='mx-0.5'><IoLogoInstagram size={25}/> </a>
         </span>
       </div>
     </footer>

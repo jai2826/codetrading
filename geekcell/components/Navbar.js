@@ -30,7 +30,7 @@ const Navbar = () => {
           <img className="rounded-lg h-14 w-16  lg:h-18 lg:w-20 r" src="/mylogo.png" alt="Geekcell.in" />
           <p className='m-2 font-medium text-purple-700'><Link href={'/'}>Geekcell.in</Link></p>
         </div>
-        <button  className='h-9 my-auto ' onClick={() => setHamactive(!hamactive)}><div className="space-y-1 p-2 self-center rounded-md lg:hidden border-2 border-purple-700">
+        <button name='menu' className='h-9 my-auto ' onClick={() => setHamactive(!hamactive)}><div className="space-y-1 p-2 self-center rounded-md lg:hidden border-2 border-purple-700">
           <div className="w-6 h-0.5 bg-purple-700"></div>
           <div className="w-6 h-0.5 bg-purple-700"></div>
           <div className="w-6 h-0.5 bg-purple-700"></div>

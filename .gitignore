@@ -1,5 +1,5 @@
-codeblogs/.env.local
-codeblogs/node_modules
+geekcell/.env.local
+geekcell/node_modules
 backend/.env
 backend/config/database.js
 backend/node_modules

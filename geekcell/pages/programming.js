@@ -63,7 +63,7 @@ const page = ({ blogs }) => {
                                 </div></Link>)
                         })}
                     </div>
-                    <div className='container flex justify-center m-4 '><button onClick={() => readmore()} className="m-2 px-2 py-1 self-center border-2 border-black rounded-md hover:bg-purple-700 hover:text-white">Readmore</button>
+                    <div className='container flex justify-center m-4 '><button name='readmore' onClick={() => readmore()} className="m-2 px-2 py-1 self-center border-2 border-black rounded-md hover:bg-purple-700 hover:text-white">Readmore</button>
                         <ToastContainer
                             position="bottom-center"
                             autoClose={4000}
