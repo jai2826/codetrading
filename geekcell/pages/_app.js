@@ -1,6 +1,5 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Head from '../components/Header'
 import Script from 'next/script'
 import '../styles/globals.css'
 import { useState,useEffect } from 'react'
@@ -18,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     }
 
     </Script>
-    <Head/>
+    
     <Navbar />
     <Component   {...pageProps} />
     <Footer />
