@@ -42,9 +42,9 @@ const page = ({ blogs }) => {
         <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100">
           <div className=" flex flex-wrap mb-20 md:flex-col">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 className=" font-medium mb-2">Everything to know about tech is here!!!</h1>
+              <h1 className=" font-medium mb-2">The right place for geeks</h1>
             </div>
-            <p className=" w-full leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit maiores ab iste, esse, perspiciatis dicta, libero unde ad fugit labore sequi nesciunt deserunt. Dolor, consectetur libero. Odio quo dolorum laboriosam quos ullam nesciunt, possimus corporis molestias eos, deleniti itaque dignissimos sint odit soluta omnis velit incidunt unde voluptatibus! Aspernatur?</p>
+            {/* <p className=" w-full leading-relaxed text-gray-500"></p> */}
           </div>
           <div className=" mx-auto  ">
             <div className="flex flex-wrap place-content-center ">

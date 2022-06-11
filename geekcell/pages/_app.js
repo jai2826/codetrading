@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }) {
     }
 
     </Script>
-    
     <Navbar />
     <Component   {...pageProps} />
     <Footer />
