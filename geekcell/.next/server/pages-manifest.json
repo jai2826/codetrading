@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/finance": "pages/finance.js",
-  "/technews": "pages/technews.js",
-  "/programming": "pages/programming.js",
-  "/": "pages/index.js"
+  "/server-sitemap.xml": "pages/server-sitemap.xml.js"
 }
