@@ -40,6 +40,20 @@
     }
    
 }  
+@layer components{
+    .blogpost pre{
+        @apply bg-black/90 text-orange-500 rounded-md p-4 my-2
+    }
+    .blogpost pre code{
+        @apply whitespace-pre-wrap 
+    }
+    .blogpost table{
+        @apply border border-black m-2 mx-auto
+    }
+    .blogpost table tr td{
+        @apply border border-black 
+    }
+}
     
 
 

@@ -5,7 +5,6 @@ import Head from 'next/head';
 
 const post = ({ blog, post }) => {
 
-
     return (
       <>
         <Head>
@@ -23,7 +22,7 @@ const post = ({ blog, post }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106" crossorigin="anonymous"></script>
         </Head>
-        <section className="container  mx-auto flex flex-col  ">
+        <section className="container  mx-auto flex flex-col ">
           <div className="lg:w-4/6 mx-auto mt-6  bg-white   rounded-md ">
             {blog.attributes.image.data && (
               <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
@@ -32,7 +31,8 @@ const post = ({ blog, post }) => {
             )}
             <div className="flex flex-col rounded-md my-4 border-2 border-gray-100">
               <h1 className="border-b-2 p-2 rounded-none">{blog && blog.attributes.title}</h1>
-              <div className=" p-4 rounded-md  w-full" dangerouslySetInnerHTML={{ __html: post }}></div>
+              <div className="blogpost p-4 rounded-md  w-full" dangerouslySetInnerHTML={{ __html: post }}></div>
+              {/* <div className=" p-4 rounded-md  w-full" >{{post}|safe } </div> */}
               <div className=" text-center lg:flex  h-auto p-6 border-t-2 border-gray-100">
                 <div className="lg:self-center items-center">
                   <div className="w-20 h-20 rounded-full inline-flex lg:self-center items-center m-4 justify-center align-middle bg-gray-800 text-gray-600">
