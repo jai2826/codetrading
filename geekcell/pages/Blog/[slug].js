@@ -31,7 +31,7 @@ const post = ({ blog, post }) => {
             )}
             <div className="flex flex-col rounded-md my-4 border-2 border-gray-100">
               <h1 className="border-b-2 p-2 rounded-none">{blog && blog.attributes.title}</h1>
-              <div className="blogpost p-4 rounded-md  w-full" dangerouslySetInnerHTML={{ __html: post }}></div>
+              <div className="blogpost p-4 rounded-md  w-full prose max-w-none" dangerouslySetInnerHTML={{ __html: post }}></div>
               {/* <div className=" p-4 rounded-md  w-full" >{{post}|safe } </div> */}
               <div className=" text-center lg:flex  h-auto p-6 border-t-2 border-gray-100">
                 <div className="lg:self-center items-center">
