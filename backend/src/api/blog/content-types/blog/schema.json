@@ -70,12 +70,12 @@
     "desc": {
       "type": "text",
       "required": true,
-      "minLength": 120,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "minLength": 150
     },
     "seo": {
       "type": "component",

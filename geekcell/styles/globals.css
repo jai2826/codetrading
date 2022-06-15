@@ -45,7 +45,7 @@
         @apply mx-auto lg:w-[80%] sm:w-full !important
     }
     .blogpost pre{
-        @apply bg-black/90 text-white rounded-md p-4 my-2 
+        @apply bg-gray-100 text-black/90 rounded-md p-4 my-2 
     }
     .blogpost pre code{
         @apply whitespace-pre-wrap 
