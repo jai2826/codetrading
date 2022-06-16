@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Script from 'next/script'
 import '../styles/globals.css'
-import { useState,useEffect } from 'react'
+
 
 
 function MyApp({ Component, pageProps }) {
@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }) {
     gtag('js', new Date());
     gtag('config', 'G-C2GW04W1L3');` 
     }
-
     </Script>
     <Navbar />
     <Component   {...pageProps} />

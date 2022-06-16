@@ -56,6 +56,9 @@
     .blogpost table tr td{
         @apply border border-black 
     }
+    .mylinkfloat {
+        @apply origin-bottom hover:scale-150 ease-in-out duration-300 
+    }
 }
     
 
