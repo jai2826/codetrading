@@ -53,11 +53,11 @@ const SearchBar = () => {
   return (
     <>
       <div className="flex items-center w-max  border-2 rounded-md border-black px-1">
-        <input className=" outline-none " type="text"  onChange={filterdata} value={filterkey} />
-        {filtered.length !== 0 && <GrFormClose onClick={clearsearch} className="cursor-pointer " size={35}/>}
-        {filtered.length === 0 && <GrSearch onClick={clearsearch}  className="opacity-50  m-[2.5px] cursor-pointer " size={30}/>}
+        <input className="w-32 outline-none " type="text" onChange={filterdata} value={filterkey} />
+        {filtered.length !== 0 && <GrFormClose onClick={clearsearch} className="cursor-pointer " size={35} />}
+        {filtered.length === 0 && <GrSearch onClick={clearsearch} className="opacity-50  m-[2.5px] cursor-pointer " size={30} />}
       </div>
-      <div>{filtered.length !== 0 && <SearchContainer  searched={filtered} />}</div>
+      <div>{filtered.length !== 0 && <SearchContainer searched={filtered} />}</div>
     </>
   );
 };

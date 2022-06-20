@@ -44,9 +44,9 @@ const Navbar = () => {
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700 max-w-max hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lg:text-lg  xl:mx-2  2xl:text-xl '} ><Link  href={'/launchpad'}><a>Launch Pad</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700 max-w-max hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lg:text-lg  xl:mx-2  2xl:text-xl '} ><Link  href={'/guides'}><a>Guides</a></Link></li>
         <li onClick={()=>setHamactive(false)} className={'hover:bg-purple-700 max-w-max hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lg:text-lg  xl:mx-2  2xl:text-xl '} ><Link  href={'/finance'}><a>Finance</a></Link></li>      
-      <li className='lg:hidden  p-1 mx-1'><SearchBar /></li>
+      <li className='lg:hidden p-1 mx-1 w-20'><SearchBar /></li>
       </ul>
-      <span className='hidden lg:block'><SearchBar /></span>
+      <span className='hidden lg:block '><SearchBar /></span>
     </div></>
 
   )
