@@ -1669,14 +1669,6 @@
     "@strapi/utils" "4.2.0"
     "lodash" "4.17.21"
 
-"@strapi/plugin-i18n@4.2.0":
-  "integrity" "sha512-IKi9k1w22sejzv6bvwGukVp+1ar6n2dt+jwwlWgSorr+48u3kyhmiZpqmLP95o9+3qE3sXpuOPm5P8vQKVNHbw=="
-  "resolved" "https://registry.npmjs.org/@strapi/plugin-i18n/-/plugin-i18n-4.2.0.tgz"
-  "version" "4.2.0"
-  dependencies:
-    "@strapi/utils" "4.2.0"
-    "lodash" "4.17.21"
-
 "@strapi/plugin-seo@^1.0.0":
   "integrity" "sha512-7ezSOeUsGWeF/nEIyuL/pihxZ9PnvK0BRgUAxymcj/a1naCh+Wp7HDhJAsspqoE5JFa0hRXeK9i9VdXagg9iOA=="
   "resolved" "https://registry.npmjs.org/@strapi/plugin-seo/-/plugin-seo-1.0.0.tgz"
