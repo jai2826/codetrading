@@ -63,7 +63,7 @@ export async function getServerSideProps(context) {
   });
   let blog = await a.json();
   let blogpost = blog.data[0].attributes.post;
-
+  // console.log(blog)
   return {
     props: { blog: blog.data[0], post: blogpost }, // will be passed to the page component as props
   };

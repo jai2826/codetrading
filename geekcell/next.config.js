@@ -8,7 +8,9 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   env: {
-    IMAGES_DOMAIN: process.env.IMAGES_DOMAIN
+    IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
+    STRAPI_TOKEN: process.env.STRAPI_TOKEN,
+    NEXT_PUBLIC_STRAPI_URL: process.env.NEXT_PUBLIC_STRAPI_URL,
   },
   images: {
     domains: [process.env.IMAGES_DOMAIN],
