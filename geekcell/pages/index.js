@@ -35,13 +35,13 @@ const page = ({ blogs }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
         <meta name="language" content="English" />
-        <link rel="icon" href="/mylogo.png" type="image/x-icon" />
+        <link  rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106" crossorigin="anonymous"></script>
       </Head>
       <section>
-        <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100">
+        <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100 rounded-2xl">
           <div className=" flex flex-wrap mb-20 md:flex-col">
-            <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <div className="w-full mb-6 lg:mb-0">
               <h1 className=" font-medium mb-2">The right place for geeks</h1>
             </div>
             {/* <p className=" w-full leading-relaxed text-gray-500"></p> */}
