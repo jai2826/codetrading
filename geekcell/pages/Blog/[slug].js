@@ -21,6 +21,7 @@ const post = ({ blog, post }) => {
             {blog.attributes.seo.canonicalURL && <meta name="keywords" content={blog.attributes.seo.canonicalURL} />}{" "}
           </>
         )}
+        <link rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
         <meta name="language" content="English" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
@@ -35,7 +36,7 @@ const post = ({ blog, post }) => {
             <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
               <img
                 alt={blog.attributes.image.data.attributes.alternativeText}
-                className="object-center h-60 md:h-128 w-full  place-self-stretch "
+                className="object-center h-60 md:h-128 w-fit place-self-stretch "
                 src={blog.attributes.image.data.attributes.url}
               />
             </div>

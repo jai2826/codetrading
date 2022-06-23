@@ -1,11 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/finance": "pages/finance.js",
-  "/techhub": "pages/techhub.js",
-  "/": "pages/index.js",
-  "/launchpad": "pages/launchpad.js",
-  "/programming": "pages/programming.js",
-  "/guides": "pages/guides.js"
+  "/_error": "pages/_error.js"
 }
