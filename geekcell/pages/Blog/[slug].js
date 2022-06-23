@@ -6,7 +6,6 @@ import { FaUser } from "react-icons/fa";
 const post = ({ blog, post }) => {
   let tempdate = blog.attributes.date;
   var mydate = new Date(tempdate).toDateString();
-  // console.table(my)
 
   return (
     <>
@@ -36,7 +35,7 @@ const post = ({ blog, post }) => {
             <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
               <img
                 alt={blog.attributes.image.data.attributes.alternativeText}
-                className="object-center h-60 md:h-128 w-fit place-self-stretch "
+                className="object-center h-60 md:h-128 w-full place-self-stretch "
                 src={blog.attributes.image.data.attributes.url}
               />
             </div>

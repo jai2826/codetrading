@@ -48,7 +48,7 @@
         @apply bg-gray-100 text-black/90 rounded-md p-4 my-2 w-[90vw] lg:w-full
     }
     .blogpost pre code{
-        @apply whitespace-pre-wrap break-words
+        @apply whitespace-pre 
     }
     .blogpost table{
         @apply border border-black m-2 mx-auto

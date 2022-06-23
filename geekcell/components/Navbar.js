@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link href={"/"}>Geekcell</Link>
             </p>
           </div>
-          <button name="menu" className="h-9 my-auto " onClick={() => setHamactive(!hamactive)}>
+          <button name="menu" className="h-9 my-auto" onClick={() => setHamactive(!hamactive)}>
             <div className="space-y-1 p-2 self-center rounded-md lg:hidden border-2 border-purple-700">
               <div className="w-6 h-0.5 bg-purple-700"></div>
               <div className="w-6 h-0.5 bg-purple-700"></div>
