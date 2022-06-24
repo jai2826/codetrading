@@ -7,27 +7,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import { TiUser } from 'react-icons/ti'
 import 'react-toastify/dist/ReactToastify.css';
 import Script from 'next/script.js'
+import Pages from '../components/Pages'
 
 
 const page = ({ blogs }) => {
-  
-
-  const [visible, setvisible] = useState(20)
-  const readmore = () => {
-    setvisible(prevState => (prevState + 20))
-    if (visible >= blogs.length)
-      toast.info('No more Blogs of this category', {
-        position: "bottom-center",
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-  }
-
-  return (
+    return (
     <>
       <Head>
         <title>Geekcell - One stop for geeks</title>
@@ -35,8 +19,12 @@ const page = ({ blogs }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
         <meta name="language" content="English" />
-        <link  rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106" crossorigin="anonymous"></script>
+        <link rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <section>
         <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100 rounded-2xl">
@@ -46,48 +34,8 @@ const page = ({ blogs }) => {
             </div>
             {/* <p className=" w-full leading-relaxed text-gray-500"></p> */}
           </div>
-          <div className=" mx-auto  ">
-            <div className="flex flex-wrap place-content-center ">
-              {blogs &&
-                blogs.slice(0, visible).map((item) => {
-                  return (
-                    <Link key={item.id} href={`/Blog/${item.attributes.slug}`}>
-                      <div className="bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg w-full sm:w-1/3 md:w-1/4 xl:w-w22  p-2 m-3  cursor-pointer">
-                        <div className="h-56 overflow-hidden">
-                          {item.attributes.image.data && (
-                            <img
-                              className="object-fill object-center h-full rounded-lg"
-                              src={item.attributes.image.data.attributes.url}
-                              width={1200}
-                              height={1000}
-                              alt=""
-                            />
-                          )}
-                        </div>
-                        <div className="flex flex-col justify-between p-2 bg-white">
-                          <p className="text-xl font-semibold h-14">{item.attributes.title}</p>
-                          <p className="text-base h-18 whitespace-normal overflow-hidden">{item.attributes.desc}</p>
-                        </div>
-                        {item.attributes.author.data && (
-                          <div className="flex items-center m-2 border-t-2 border-gray-100 w-full mt-auto ">
-                            <div className="flex items-center space-x-1 pt-2">
-                              <TiUser /> <p>{item.attributes.author.data.attributes.name}</p>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  );
-                })}
-            </div>
-            <div className="container flex justify-center m-4 ">
-              <button name="readmore" onClick={() => readmore()} className="m-2 px-2 py-1 self-center border-2 border-black rounded-md hover:bg-purple-700 hover:text-white">
-                Readmore
-              </button>
-              <ToastContainer position="bottom-center" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-            </div>
-          </div>
-        
+            <Pages blogs={blogs} />
+          
         </div>
       </section>
     </>
