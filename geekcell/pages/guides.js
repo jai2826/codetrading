@@ -50,7 +50,7 @@ export async function getServerSideProps(context) {
     'public, s-maxage=10, stale-while-revalidate=59'
   )
   let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
-  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Basic&sort=updatedAt%3Adesc&populate=*`, { headers: headers })
+  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Guide&sort=updatedAt%3Adesc&populate=*`, { headers: headers })
   let blogs = await a.json();
   let newblogs = blogs.data;
 
