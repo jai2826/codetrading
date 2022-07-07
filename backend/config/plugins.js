@@ -21,11 +21,11 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'aws-s3',
       providerOptions: {
-        accessKeyId: env('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: env('AWS_ACCESS_SECRET'),
-        region: env('AWS_REGION'),
+        accessKeyId: env('IAWS_ACCESS_KEY_ID'),
+        secretAccessKey: env('IAWS_ACCESS_SECRET'),
+        region: env('IAWS_REGION'),
         params: {
-          Bucket: env('AWS_BUCKET'),
+          Bucket: env('IAWS_BUCKET'),
          
         },
       },
