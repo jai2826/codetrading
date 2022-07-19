@@ -2,6 +2,10 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/Blog/[slug]": "pages/Blog/[slug].js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/programming": "pages/programming.js",
+  "/techhub": "pages/techhub.js",
+  "/guides": "pages/guides.js",
+  "/finance": "pages/finance.js",
+  "/launchpad": "pages/launchpad.js"
 }

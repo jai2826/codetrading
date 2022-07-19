@@ -1,17 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
-import Head from 'next/head'
-import Link from 'next/link'
-import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-import { TiUser } from 'react-icons/ti'
-import 'react-toastify/dist/ReactToastify.css';
-import Script from 'next/script.js'
-import Pages from '../components/Pages'
-
+import React from "react";
+import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { TiUser } from "react-icons/ti";
+import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script.js";
+import Pages from "../components/Pages";
+import { GraphQLClient } from "graphql-request";
+import { gql } from "graphql-request";
 
 const page = ({ blogs }) => {
-    return (
+  return (
     <>
       <Head>
         <title>Geekcell - One stop for geeks</title>
@@ -32,35 +33,47 @@ const page = ({ blogs }) => {
             <div className="w-full mb-6 lg:mb-0">
               <h1 className=" font-medium mb-2">The right place for geeks</h1>
             </div>
-            {/* <p className=" w-full leading-relaxed text-gray-500"></p> */}
           </div>
-            <Pages blogs={blogs} />
-          
+          <Pages blogs={blogs} />
         </div>
       </section>
     </>
   );
-}
+};
+export async function getServerSideProps() {
 
-
-
-
-
-
-
-
-export async function getServerSideProps(context) {
-  context.res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
-  let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
-  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?sort=updatedAt%3Adesc&populate=*`, { headers: headers })
-  let blogs = await a.json();
-  let newblogs = blogs.data;
   
-  return {
-    props: { blogs: newblogs },
+const QUERY = gql`
+  query {
+    blogs(where: { category_contains_all: Basic }) {
+      id
+      slug
+      title
+      description
+      post {
+        html
+      }
+      date
+      author {
+        name
+      }
+      coverimage {
+        url
+      }
+    }
   }
+`;
+
+const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
+  headers: {
+    Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
+  },
+});
+
+  const { blogs } = await hygraph.request(QUERY);
+  return {
+    props: { blogs },
+  };
 }
-export default page
+export default page;
+

@@ -2,15 +2,17 @@ import Script from "next/script";
 import React from "react";
 import Head from "next/head";
 import { FaUser } from "react-icons/fa";
+import { GraphQLClient } from "graphql-request";
+import { gql } from "graphql-request";
 
 const post = ({ blog, post }) => {
-  let tempdate = blog.attributes.date;
+  let tempdate = blog.date;
   var mydate = new Date(tempdate).toDateString();
 
   return (
     <>
       <Head>
-        {blog.attributes.seo && (
+        {/* {blog.seo && (
           <>
             {" "}
             {blog.attributes.seo && <title>{blog.attributes.seo.metaTitle} </title>}
@@ -19,7 +21,7 @@ const post = ({ blog, post }) => {
             {blog.attributes.seo.metaRobots && <meta name="robots" content={blog.attributes.seo.metaRobots} />}
             {blog.attributes.seo.canonicalURL && <meta name="keywords" content={blog.attributes.seo.canonicalURL} />}{" "}
           </>
-        )}
+        )} */}
         <link rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
         <meta name="language" content="English" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,21 +33,21 @@ const post = ({ blog, post }) => {
       </Head>
       <section className="container  mx-auto flex flex-col">
         <div className="lg:w-4/6 mx-auto mt-6  bg-white   rounded-md ">
-          {blog.attributes.image.data && (
+          {blog.coverimage && (
             <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
               <img
-                alt={blog.attributes.image.data.attributes.alternativeText}
+                alt={"GeekImage"}
                 className="object-center h-60 md:h-128 w-full place-self-stretch "
-                src={blog.attributes.image.data.attributes.url}
+                src={blog.coverimage.url}
               />
             </div>
           )}
           <div className="flex flex-col rounded-md my-4 border-2 border-gray-100">
-            <h1 className=" p-2 rounded-none font-semibold text-5xl">{blog && blog.attributes.title}</h1>
+            <h1 className=" p-2 rounded-none font-semibold text-5xl">{blog && blog.title}</h1>
             <div className="p-2 flex items-center space-x-2 text-sm">
               <FaUser />
               <p>
-                <a href="/">{blog.attributes.author.data.attributes.name}</a> on {mydate}
+                <a href="/">{blog.author.name}</a> on {mydate}
               </p>
             </div>
             <div className="blogpost p-4 rounded-md  w-full prose max-w-none" dangerouslySetInnerHTML={{ __html: post }}></div>
@@ -56,16 +58,53 @@ const post = ({ blog, post }) => {
   );
 };
 
+
+
+
 export async function getServerSideProps(context) {
-  let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` };
-  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[slug][$eq]=${context.query.slug}` + `&populate=*`, {
-    headers: headers,
+  // let slug = "my-first-blog1"
+  let variables = {
+    slug: context.query.slug
+  }
+  
+  const QUERY = gql`
+  query($slug: String!) {
+    blog(where: { slug: $slug }) {
+      id
+      title
+      description
+      slug
+      post {
+        html
+      }
+      date
+      seo {
+        id
+      }
+      coverimage {
+        url
+      }
+      author {
+        name
+      }
+      category
+    }
+  }
+  `;
+  
+  
+  
+  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
+    headers: {
+      Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
+    },
   });
-  let blog = await a.json();
-  let blogpost = blog.data[0].attributes.post;
+  
+  const { blog } = await hygraph.request(QUERY,variables);
   // console.log(blog)
   return {
-    props: { blog: blog.data[0], post: blogpost }, // will be passed to the page component as props
+    props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
   };
 }
+
 export default post;

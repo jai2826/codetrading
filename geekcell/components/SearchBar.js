@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import SearchContainer from "./SearchContainer";
 import { GrFormClose, GrSearch } from "react-icons/gr";
-
+import { GraphQLClient } from "graphql-request";
+import { gql } from "graphql-request";
 
 const SearchBar = () => {
   // let searchref = useRef();
@@ -13,14 +14,36 @@ const SearchBar = () => {
 
   const [newblogs, setNewblogs] = useState();
   const fetchblogs = async () => {
-    let headers = {
-      Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
-    };
-    let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?populate=*`, {
-      headers: headers,
-    });
-    const blogs = await a.json();
-    return blogs;
+      const QUERY = gql`
+        query {
+          blogs {
+            id
+            slug
+            title
+            description
+            post {
+              html
+            }
+            date
+            author {
+              name
+            }
+            coverimage {
+              url
+            }
+          }
+        }
+      `;
+
+      const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
+        headers: {
+          Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
+        },
+      });
+
+      const { blogs } = await hygraph.request(QUERY);
+      return blogs
+
   };
 
   useEffect(() => {
@@ -35,8 +58,8 @@ const SearchBar = () => {
   const [filterkey, setFilterkey] = useState([]);
   const filterdata = (e) => {
     const searchKey = e.target.value;
-    const filtering = newblogs.data.filter((value) => {
-      return value.attributes.title.toLowerCase().includes(searchKey.toLowerCase());
+    const filtering = newblogs.filter((value) => {
+      return value.title.toLowerCase().includes(searchKey.toLowerCase());
     });
     setFilterkey(searchKey);
 

@@ -10,6 +10,7 @@ module.exports = {
   env: {
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
     STRAPI_TOKEN: process.env.STRAPI_TOKEN,
+    GRAPHQL_AUTH_TOKEN:process.env.GRAPHQL_AUTH_TOKEN,
     NEXT_PUBLIC_STRAPI_URL: process.env.NEXT_PUBLIC_STRAPI_URL,
   },
   images: {

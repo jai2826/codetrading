@@ -12,7 +12,7 @@ const SearchContainer = ({ searched }) => {
               key={item.id}
               className={` lg:whitespace-nowrap overflow-hidden shadow-sm rounded-md p-2 hover:bg-purple-700 w-fit hover:text-white font-semibold mx-1 lg:text-xl `}
             >
-              <Link href={`/Blog/${item.attributes.slug}`}>{item.attributes.title}</Link>
+              <Link href={`/blog/${item.slug}`}>{item.title}</Link>
             </div>
           );
         })}

@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Pages from '../components/Pages'
-
+import { GraphQLClient } from "graphql-request";
+import { gql } from "graphql-request";
 
 
 const page = ({ blogs }) => {
@@ -44,18 +45,37 @@ const page = ({ blogs }) => {
 
 
 
-export async function getServerSideProps(context) {
-  context.res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
-  let headers = { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
-  let a = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?filters[categories][name]=Guide&sort=updatedAt%3Adesc&populate=*`, { headers: headers })
-  let blogs = await a.json();
-  let newblogs = blogs.data;
+export async function getServerSideProps() {
+  const QUERY = gql`
+    query {
+      blogs(where: { category_contains_all: Guide }) {
+        id
+        slug
+        title
+        description
+        post {
+          html
+        }
+        date
+        author {
+          name
+        }
+        coverimage {
+          url
+        }
+      }
+    }
+  `;
 
+  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
+    headers: {
+      Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
+    },
+  });
+
+  const { blogs } = await hygraph.request(QUERY);
   return {
-    props: { blogs: newblogs },
-  }
+    props: { blogs },
+  };
 }
 export default page
