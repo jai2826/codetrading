@@ -12,16 +12,16 @@ const post = ({ blog, post }) => {
   return (
     <>
       <Head>
-        {/* {blog.seo && (
+        {blog.seo && (
           <>
             {" "}
-            {blog.attributes.seo && <title>{blog.attributes.seo.metaTitle} </title>}
-            {blog.attributes.seo.metaDescription && <meta name="description" content={blog.attributes.seo.metaDescription} />}
-            {blog.attributes.seo.keywords && <meta name="keywords" content={blog.attributes.seo.keywords} />}
-            {blog.attributes.seo.metaRobots && <meta name="robots" content={blog.attributes.seo.metaRobots} />}
-            {blog.attributes.seo.canonicalURL && <meta name="keywords" content={blog.attributes.seo.canonicalURL} />}{" "}
+            {blog.seo && <title>{blog.seo.title} </title>}
+            {blog.seo.description && <meta name="description" content={blog.seo.description} />}
+            {blog.seo.keywords && <meta name="keywords" content={blog.seo.keywords} />}
+            {blog.seo.metaRobots && <meta name="robots" content={blog.seo.metaRobots} />}
+            {blog.seo.canonicalURL && <meta name="keywords" content={blog.seo.canonicalURL} />}{" "}
           </>
-        )} */}
+        )}
         <link rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
         <meta name="language" content="English" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,15 +35,11 @@ const post = ({ blog, post }) => {
         <div className="lg:w-4/6 mx-auto mt-6  bg-white   rounded-md ">
           {blog.coverimage && (
             <div className="rounded-md border-2 md:max-h-128 overflow-hidden ">
-              <img
-                alt={"GeekImage"}
-                className="object-center h-60 md:h-128 w-full place-self-stretch "
-                src={blog.coverimage.url}
-              />
+              <img alt={"GeekImage"} className="object-center h-60 md:h-128 w-full place-self-stretch " src={blog.coverimage.url} />
             </div>
           )}
           <div className="flex flex-col rounded-md my-4 border-2 border-gray-100">
-            <h1 className=" p-2 rounded-none font-semibold text-5xl">{blog && blog.title}</h1>
+            <h1 className=" p-2 rounded-none font-semibold text-5xl">{blog.title}</h1>
             <div className="p-2 flex items-center space-x-2 text-sm">
               <FaUser />
               <p>
@@ -61,10 +57,10 @@ const post = ({ blog, post }) => {
 
 
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({query}) {
   // let slug = "my-first-blog1"
   let variables = {
-    slug: context.query.slug
+    slug: query.slug
   }
   
   const QUERY = gql`
@@ -80,7 +76,13 @@ export async function getServerSideProps(context) {
       date
       seo {
         id
-      }
+        image {
+          url
+        }
+        keywords
+        title
+        description
+    }
       coverimage {
         url
       }
@@ -101,7 +103,7 @@ export async function getServerSideProps(context) {
   });
   
   const { blog } = await hygraph.request(QUERY,variables);
-  // console.log(blog)
+  console.log(blog)
   return {
     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
   };
