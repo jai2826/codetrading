@@ -1,22 +1,6 @@
 {
-  "/_document": "pages/_document.js",
-  "/api/hello": "pages/api/hello.js",
   "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/Services/Advertisements": "pages/Services/Advertisements.js",
-  "/Services/Websitebuild": "pages/Services/Websitebuild.js",
-  "/": "pages/index.js",
-  "/finance": "pages/finance.js",
-  "/guides": "pages/guides.js",
-  "/blog/[slug]": "pages/blog/[slug].js",
-  "/server-sitemap.xml": "pages/server-sitemap.xml.js",
-  "/launchpad": "pages/launchpad.js",
-  "/techhub": "pages/techhub.js",
-  "/programming": "pages/programming.js",
-  "/en/404": "pages/en/404.html",
-  "/en/500": "pages/en/500.html",
-  "/en/services": "pages/en/services.html",
-  "/en/signup": "pages/en/signup.html",
-  "/en/carrier": "pages/en/carrier.html",
-  "/en/aboutus": "pages/en/aboutus.html"
+  "/blog/[slug]": "pages/blog/[slug].js"
 }
