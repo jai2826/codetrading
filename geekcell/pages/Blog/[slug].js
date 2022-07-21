@@ -103,7 +103,7 @@ export async function getServerSideProps({query}) {
   });
   
   const { blog } = await hygraph.request(QUERY,variables);
-  console.log(blog)
+  
   return {
     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
   };
