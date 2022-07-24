@@ -54,56 +54,51 @@ const post = ({ blog, post }) => {
   );
 };
 
-
-
-
-export async function getServerSideProps({query}) {
+export async function getServerSideProps(ctx) {
   // let slug = "my-first-blog1"
+
   let variables = {
-    slug: query.slug
-  }
-  
+    slug: ctx.params.slug,
+  };
   const QUERY = gql`
-  query($slug: String!) {
-    blog(where: { slug: $slug }) {
-      id
-      title
-      description
-      slug
-      post {
-        html
-      }
-      date
-      seo {
+    query ($slug: String!) {
+      blog(where: { slug: $slug }) {
         id
-        image {
-          url
-        }
-        keywords
         title
         description
-    }
-      coverimage {
-        url
+        slug
+        post {
+          html
+        }
+        date
+        seo {
+          id
+          image {
+            url
+          }
+          keywords
+          title
+          description
+        }
+        coverimage {
+          url
+        }
+        author {
+          name
+        }
+        category
       }
-      author {
-        name
-      }
-      category
     }
-  }
   `;
-  
-  
-  
+
   const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
     headers: {
       Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
     },
   });
-  
-  const { blog } = await hygraph.request(QUERY,variables);
-  
+
+  const { blog } = await hygraph.request(QUERY, variables);
+
   return {
     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
   };
