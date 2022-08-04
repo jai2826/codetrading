@@ -1,14 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
-import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import { TiUser } from "react-icons/ti";
-import "react-toastify/dist/ReactToastify.css";
-import Script from "next/script.js";
 import Pages from "../components/Pages";
-import { GraphQLClient } from "graphql-request";
+import { request } from "graphql-request";
 import { gql } from "graphql-request";
 
 const page = ({ blogs }) => {
@@ -64,13 +57,9 @@ const QUERY = gql`
   }
 `;
 
-const hygraph = new GraphQLClient(`${process.env.GRAPHQL_ENDPOINT}`, {
-  headers: {
-    Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
-  },
-});
 
-  const { blogs } = await hygraph.request(QUERY);
+  const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
+  const { blogs } = await request(endpoint, QUERY);
   return {
     props: { blogs },
   };

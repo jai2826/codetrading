@@ -2,7 +2,7 @@ import Script from "next/script";
 import React from "react";
 import Head from "next/head";
 import { FaUser } from "react-icons/fa";
-import { GraphQLClient } from "graphql-request";
+import { request } from "graphql-request";
 import { gql } from "graphql-request";
 
 const post = ({ blog, post }) => {
@@ -57,7 +57,7 @@ const post = ({ blog, post }) => {
 export async function getServerSideProps({params}) {
   // let slug = "my-first-blog1"
 
-  const {slug}= params;
+  
   const QUERY = gql`
     query blog($slug: String!) {
       blog(where: { slug: $slug }) {
@@ -90,13 +90,11 @@ export async function getServerSideProps({params}) {
   `;
 
   const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
-  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
-    headers: {
-      Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
-    },
-  });
+  let variables = {
+    slug:params.slug
+  }
 
-  const { blog } = await hygraph.request(QUERY, { slug });
+  const { blog } = await request(endpoint, QUERY, variables);
 
   return {
     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
