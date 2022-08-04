@@ -54,14 +54,12 @@ const post = ({ blog, post }) => {
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps({params}) {
   // let slug = "my-first-blog1"
 
-  let variables = {
-    slug: ctx.params.slug,
-  };
+  const {slug}= params;
   const QUERY = gql`
-    query ($slug: String!) {
+    query blog($slug: String!) {
       blog(where: { slug: $slug }) {
         id
         title
@@ -91,13 +89,14 @@ export async function getServerSideProps(ctx) {
     }
   `;
 
+  const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
   const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
     headers: {
       Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
     },
   });
 
-  const { blog } = await hygraph.request(QUERY, variables);
+  const { blog } = await hygraph.request(QUERY, { slug });
 
   return {
     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props

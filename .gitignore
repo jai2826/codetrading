@@ -1,5 +1,2 @@
-geekcell/.env.local
-geekcell/node_modules
-backend/.env
-backend/config/database.js
-backend/node_modules
+.env.local
+node_modules
