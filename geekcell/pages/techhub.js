@@ -58,7 +58,7 @@ export async function getServerSideProps() {
     }
   `;
 
-  const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master", {
+  const hygraph = new GraphQLClient(`${process.env.GRAPHQL_ENDPOINT}`, {
     headers: {
       Authorization: `Bearer ${process.env.GRAPHQL_AUTH_TOKEN}`,
     },

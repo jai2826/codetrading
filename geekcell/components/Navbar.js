@@ -96,7 +96,7 @@ const Navbar = () => {
               <a>Guides</a>
             </Link>
           </li>
-          <li
+          {/* <li
             onClick={() => setHamactive(false)}
             className={
               "hover:bg-purple-700 max-w-max hover:text-white font-semibold p-1 mx-1 rounded-lg  xl:px-2 lg:text-lg  xl:mx-2  2xl:text-xl "
@@ -105,7 +105,7 @@ const Navbar = () => {
             <Link href={"/finance"}>
               <a>Finance</a>
             </Link>
-          </li>
+          </li> */}
           <li className="lg:hidden p-1 mx-1 w-20">
             <SearchBar />
           </li>
