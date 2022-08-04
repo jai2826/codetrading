@@ -2,7 +2,7 @@ import Script from "next/script";
 import React from "react";
 import Head from "next/head";
 import { FaUser } from "react-icons/fa";
-import { request } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
 import { gql } from "graphql-request";
 
 const post = ({ blog, post }) => {
@@ -54,11 +54,67 @@ const post = ({ blog, post }) => {
   );
 };
 
-export async function getServerSideProps({params}) {
-  // let slug = "my-first-blog1"
+// export async function getServerSideProps({params}) {
+//   // let slug = "my-first-blog1"
 
   
-  const QUERY = gql`
+//   const QUERY = gql`
+//     query blog($slug: String!) {
+//       blog(where: { slug: $slug }) {
+//         id
+//         title
+//         description
+//         slug
+//         post {
+//           html
+//         }
+//         date
+//         seo {
+//           id
+//           image {
+//             url
+//           }
+//           keywords
+//           title
+//           description
+//         }
+//         coverimage {
+//           url
+//         }
+//         author {
+//           name
+//         }
+//         category
+//       }
+//     }
+//   `;
+
+//   const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
+//   let variables = {
+//     slug:params.slug
+//   }
+
+//   const { blog } = await request(endpoint, QUERY, variables);
+
+//   return {
+//     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
+//   };
+// }
+
+export default post;
+
+
+
+
+
+
+
+
+const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master");
+
+export async function getStaticProps({ params }) {
+  const { blog } = await hygraph.request(
+    `
     query blog($slug: String!) {
       blog(where: { slug: $slug }) {
         id
@@ -87,18 +143,34 @@ export async function getServerSideProps({params}) {
         category
       }
     }
-  `;
-
-  const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
-  let variables = {
-    slug:params.slug
-  }
-
-  const { blog } = await request(endpoint, QUERY, variables);
+  `,
+    {
+      slug: params.slug,
+    }
+  );
 
   return {
-    props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
+    props: {
+      blog:blog,
+      post: blog.post.html,
+    },
   };
 }
 
-export default post;
+export async function getStaticPaths() {
+  const { blogs } = await hygraph.request(`
+    {
+      blogs {
+        slug
+      }
+    }
+  `);
+
+  return {
+    paths: blogs.map(({ slug }) => ({
+      params: { slug },
+    })),
+    fallback: false,
+  };
+}
+

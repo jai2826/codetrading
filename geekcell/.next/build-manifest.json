@@ -34,26 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/blog/[slug].js"
-    ],
-    "/guides": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/guides.js"
-    ],
-    "/launchpad": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/launchpad.js"
-    ],
-    "/programming": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/programming.js"
-    ],
-    "/techhub": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/techhub.js"
     ]
   },
   "ampFirstPages": []
