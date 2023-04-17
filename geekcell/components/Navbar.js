@@ -1,26 +1,17 @@
-import React, { useRef } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState,useEffect } from 'react'
-import SearchBar from './SearchBar'
-
-
-
-
-
+import React, { useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
-  
-  let myref= useRef();
-  const [hamactive, setHamactive] = useState(false)
+  let myref = useRef();
+  const [hamactive, setHamactive] = useState(false);
   useEffect(() => {
-    document.addEventListener('mousedown',(event)=>{
-    if(!myref.current.contains(event.target))
-      setHamactive(false)
-    })
-  
-  }, [])
-  
+    document.addEventListener("mousedown", (event) => {
+      if (!myref.current.contains(event.target)) setHamactive(false);
+    });
+  }, []);
 
   return (
     <>
@@ -30,14 +21,22 @@ const Navbar = () => {
       >
         <div className="flex w-full lg:w-1/4 justify-between ">
           <div className="flex items-center ">
-            <Link  href={'/'}>
-              <img className="rounded-md h-14 w-14  lg:h-18 lg:w-18 r" src="/icons/Geeklogo5.png" alt="Geekcell.in" />
+            <Link href={"/"}>
+              <img
+                className="rounded-md h-14 w-14  lg:h-18 lg:w-18 r"
+                src="/icons/Geeklogo5.png"
+                alt="Geekcell.in"
+              />
             </Link>
             <p className="m-2 font-medium text-purple-700 text-xl">
               <Link href={"/"}>Geekcell</Link>
             </p>
           </div>
-          <button name="menu" className="h-9 my-auto" onClick={() => setHamactive(!hamactive)}>
+          <button
+            name="menu"
+            className="h-9 my-auto"
+            onClick={() => setHamactive(!hamactive)}
+          >
             <div className="space-y-1 p-2 self-center rounded-md lg:hidden border-2 border-purple-700">
               <div className="w-6 h-0.5 bg-purple-700"></div>
               <div className="w-6 h-0.5 bg-purple-700"></div>
@@ -45,7 +44,12 @@ const Navbar = () => {
             </div>
           </button>
         </div>
-        <ul className={hamactive ? "mynavulphone " : "mynavulinactive lg:mynavul "}>
+        <ul
+          className={
+            hamactive ? "mynavulphone " : "mynavulinactive lg:mynavul "
+          }
+          
+        >
           <li
             onClick={() => setHamactive(false)}
             className={
@@ -53,7 +57,7 @@ const Navbar = () => {
             }
           >
             <Link href={"/"}>
-              <a>Home</a>
+              Home
             </Link>
           </li>
           <li
@@ -63,7 +67,7 @@ const Navbar = () => {
             }
           >
             <Link href={"/programming"}>
-              <a>Programming</a>
+              Programming
             </Link>
           </li>
           <li
@@ -73,7 +77,7 @@ const Navbar = () => {
             }
           >
             <Link href={"/techhub"}>
-              <a>Tech Hub</a>
+              Tech Hub
             </Link>
           </li>
           <li
@@ -83,7 +87,7 @@ const Navbar = () => {
             }
           >
             <Link href={"/launchpad"}>
-              <a>Launch Pad</a>
+              Launch Pad
             </Link>
           </li>
           <li
@@ -93,7 +97,7 @@ const Navbar = () => {
             }
           >
             <Link href={"/guides"}>
-              <a>Guides</a>
+              Guides
             </Link>
           </li>
           {/* <li
@@ -116,7 +120,6 @@ const Navbar = () => {
       </div>
     </>
   );
-}
+};
 
-export default Navbar
-
+export default Navbar;

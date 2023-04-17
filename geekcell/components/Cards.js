@@ -4,8 +4,8 @@ import { TiUser } from "react-icons/ti";
 
 const Cards = ({item}) => {
   return (
-    <Link href={`/blog/${item.slug}`}>
-      <div className="bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg w-full sm:w-1/3 md:w-1/4 xl:w-w22  p-2 m-3  cursor-pointer">
+    <Link className='bg-white flex flex-col overflow-hidden  rounded-lg shadow-lg w-full sm:w-w45 lg:w-w30 xl:w-w22   p-2 m-3  cursor-pointer' href={`/blog/${item.slug}`}>
+      
         <div className="h-56 overflow-hidden">
           {item.coverimage && (
             <img
@@ -28,7 +28,7 @@ const Cards = ({item}) => {
             </div>
           </div>
         )}
-      </div>
+      
     </Link>
   );
 }

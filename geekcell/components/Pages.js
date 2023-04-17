@@ -26,7 +26,7 @@ const readmore = () => {
 
   return (
     <div className=" mx-auto  ">
-      <div className="flex flex-wrap place-content-center ">
+      <div className="flex justify-center flex-col flex-wrap sm:flex-row">
         {blogs &&
           blogs.slice(0, visible).map((item) => {
             return (

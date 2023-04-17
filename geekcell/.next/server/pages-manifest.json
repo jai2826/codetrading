@@ -1,9 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/blog/[slug]": "pages/blog/[slug].js",
-  "/techhub": "pages/techhub.js",
-  "/launchpad": "pages/launchpad.js"
+  "/_document": "pages/_document.js",
+  "/programming": "pages/programming.js",
+  "/": "pages/index.js"
 }
