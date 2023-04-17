@@ -14,11 +14,7 @@ const page = ({ blogs }) => {
         <meta name="keywords" content="Tech, Techhub,Technews, Techlaunch, Games, Social Media, Software, Gadgets" />
         <meta name="language" content="English" />
         <link rel="icon" href="/icons/Geeklogo5-modified.png" type="image/x-icon" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106"
-          crossorigin="anonymous"
-        ></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2378548681525106" crossorigin="anonymous"></script>
       </Head>
       <section>
         <div className="2xl:container mx-auto px-4 lg:py-10  2xl:px-8 border-2 my-6 border-gray-100 rounded-2xl">
@@ -34,29 +30,26 @@ const page = ({ blogs }) => {
   );
 };
 export async function getServerSideProps() {
-
-  
-const QUERY = gql`
-  query {
-    blogs(where: { category_contains_all: Basic }) {
-      id
-      slug
-      title
-      description
-      post {
-        html
-      }
-      date
-      author {
-        name
-      }
-      coverimage {
-        url
+  const QUERY = gql`
+    query {
+      blogs(where: { category_contains_all: Tech }) {
+        id
+        slug
+        title
+        description
+        post {
+          html
+        }
+        date
+        author {
+          name
+        }
+        coverimage {
+          url
+        }
       }
     }
-  }
-`;
-
+  `;
 
   const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
   const { blogs } = await request(endpoint, QUERY);
@@ -65,4 +58,3 @@ const QUERY = gql`
   };
 }
 export default page;
-
