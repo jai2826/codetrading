@@ -30,10 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/blog/[slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/blog/[slug].js"
+    ],
     "/guides": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/guides.js"
+    ],
+    "/launchpad": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/launchpad.js"
     ],
     "/programming": [
       "static/chunks/webpack.js",

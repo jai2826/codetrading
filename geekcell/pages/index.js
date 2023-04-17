@@ -29,10 +29,13 @@ const page = ({ blogs }) => {
     </>
   );
 };
+
+
+
 export async function getServerSideProps() {
   const QUERY = gql`
     query {
-      blogs(where: { category_contains_all: Tech }) {
+      blogs{
         id
         slug
         title

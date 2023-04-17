@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { GraphQLClient } from "graphql-request";
 import { gql } from "graphql-request";
 
+
 const post = ({ blog, post }) => {
   let tempdate = blog.date;
   var mydate = new Date(tempdate).toDateString();
@@ -54,65 +55,12 @@ const post = ({ blog, post }) => {
   );
 };
 
-// export async function getServerSideProps({params}) {
-//   // let slug = "my-first-blog1"
-
-  
-//   const QUERY = gql`
-//     query blog($slug: String!) {
-//       blog(where: { slug: $slug }) {
-//         id
-//         title
-//         description
-//         slug
-//         post {
-//           html
-//         }
-//         date
-//         seo {
-//           id
-//           image {
-//             url
-//           }
-//           keywords
-//           title
-//           description
-//         }
-//         coverimage {
-//           url
-//         }
-//         author {
-//           name
-//         }
-//         category
-//       }
-//     }
-//   `;
-
-//   const endpoint = "https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master";
-//   let variables = {
-//     slug:params.slug
-//   }
-
-//   const { blog } = await request(endpoint, QUERY, variables);
-
-//   return {
-//     props: { blog: blog, post: blog.post.html }, // will be passed to the page component as props
-//   };
-// }
-
-export default post;
-
-
-
-
-
 
 
 
 const hygraph = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/cl5l4wqps3qu101ta05lofm6s/master");
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { blog } = await hygraph.request(
     `
     query blog($slug: String!) {
@@ -143,34 +91,20 @@ export async function getStaticProps({ params }) {
         category
       }
     }
-  `,
+    `,
     {
       slug: params.slug,
     }
-  );
-
-  return {
-    props: {
-      blog:blog,
-      post: blog.post.html,
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const { blogs } = await hygraph.request(`
-    {
-      blogs {
-        slug
-      }
-    }
-  `);
-
-  return {
-    paths: blogs.map(({ slug }) => ({
-      params: { slug },
-    })),
-    fallback: false,
-  };
-}
-
+    );
+    
+    return {
+      props: {
+        blog:blog,
+        post: blog.post.html,
+      },
+    };
+  }
+  
+  
+  
+  export default post;

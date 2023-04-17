@@ -2,7 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/launchpad": "pages/launchpad.js",
+  "/guides": "pages/guides.js",
+  "/blog/[slug]": "pages/blog/[slug].js",
   "/": "pages/index.js",
-  "/programming": "pages/programming.js",
-  "/guides": "pages/guides.js"
+  "/programming": "pages/programming.js"
 }
